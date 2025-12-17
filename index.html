@@ -37,6 +37,138 @@
     />
   </head>
   <body>
-    <header>hello</header>
+    <header>
+      <div>
+        <img
+          class="logo"
+          src="./assets/images/logo.svg"
+          alt="logo do conectea. Três pessoas juntas com quebra-cabeça no meio representando conexão."
+        />
+
+        <nav class="desktop-navbar">
+          <ul>
+            <li>
+              <a href="#"> Início </a>
+            </li>
+            <li>
+              <a href="#about"> Sobre </a>
+            </li>
+            <li>
+              <a href="#services"> Serviços </a>
+            </li>
+            <li>
+              <a href="#steps"> Etapas </a>
+            </li>
+            <li>
+              <a href="#footer"> Contato </a>
+            </li>
+          </ul>
+
+          <div class="buttons">
+            <a
+              target="_blank"
+              class="btn whatsapp-btn"
+              href=" https://wa.me/5579981391354"
+            >
+              Fale conosco
+              <i id="w-i" class="ph ph-whatsapp-logo"></i>
+            </a>
+          </div>
+        </nav>
+
+        <div class="mobile-menu">
+          <a class="contact">
+            <i class="ph ph-phone"></i>
+          </a>
+          <button onclick="toggleNavbar()">
+            <i class="ph ph-list"></i>
+          </button>
+
+          <nav id="mobile-navbar">
+            <div class="top">
+              <img
+                class="logo"
+                src="./assets/images/logo.svg"
+                alt="logo do conectea. Três pessoas juntas com quebra-cabeça no meio representando conexão."
+              />
+
+              <div>
+                <h4>ConecTEA</h4>
+                <p>Fazendo a diferença</p>
+              </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="ph ph-house"></i>
+                  Início
+                </a>
+              </li>
+              <li>
+                <a href="#about">
+                  <i class="ph ph-users"></i>
+                  Sobre
+                </a>
+              </li>
+              <li>
+                <a href="#services">
+                  <i class="ph ph-package"></i>
+                  Serviços
+                </a>
+              </li>
+              <li>
+                <a href="#steps">
+                  <i class="ph ph-book-open-text"></i>
+                  Etapas
+                </a>
+              </li>
+              <li>
+                <a href="#footer">
+                  <i class="ph ph-phone"></i>
+                  Contato
+                </a>
+              </li>
+            </ul>
+
+            <div class="buttons">
+              <a target="_blank" class="btn outline-btn">
+                <span>
+                  Acesse nosso protótipo
+                  <i id="w-i" class="ph ph-arrow-up-right"></i>
+                </span>
+              </a>
+              <a target="_blank" class="btn outline-btn">
+                <span>
+                  Entre em contato
+                  <i id="i-i" class="ph ph-envelope-simple"></i>
+                </span>
+              </a>
+            </div>
+
+            <button class="close-navbar" onclick="toggleNavbar()">
+              <i class="ph-bold ph-x"></i>
+            </button>
+          </nav>
+          <div onclick="toggleNavbar()" id="mobile-overlay">
+            <p class="sr-only">Clique para fechar o menu de navegação</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="title">
+        <h1><span>Somos</span> o Conec<span>TEA</span></h1>
+        <p>
+          Um aplicativo para interligar quem participa da vida de crianças com
+          TEA.
+        </p>
+      </div>
+    </main>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>

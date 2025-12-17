@@ -1,0 +1,32 @@
+// =============================
+// Paleta de cores
+// =============================
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-primary: #ffbb00;
+$color-purple: #8979ff;
+
+$color-light-300: #d8d8d8;
+
+@mixin bg-gradient {
+  background: linear-gradient(to right, #ffcd43, #ffbb00);
+}
+
+// =============================
+// Tamanhos das fontes
+// =============================
+
+$text-title: 2.375rem;
+$text-lg: 1.125rem;
+$text-md: 1rem;
+$text-sm: 0.875rem;
+$text-extra-sm: 0.75rem;
+
+// =============================
+// Arredondamentos
+// =============================
+
+$rounded-lg: 2.8125rem;
+$rounded-md: 1rem;
