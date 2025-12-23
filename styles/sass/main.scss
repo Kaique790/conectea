@@ -1,5 +1,7 @@
 @use "./variables.scss" as *;
 @use "./header.scss";
+@use "./hero.scss";
+@use "./about.scss";
 
 * {
   padding: 0;
@@ -15,10 +17,6 @@ html {
   width: 100%;
 
   font-family: "poppins", sans-serif;
-
-  @media (width <= 500px) {
-    font-size: 96%;
-  }
 }
 
 html {
@@ -34,6 +32,8 @@ body {
   min-width: 100%;
   max-width: 100%;
 
+  overflow-x: hidden;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -86,7 +86,7 @@ i {
 
   color: $color-black;
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   transition: all 0.3s;
 
   i {
@@ -95,10 +95,11 @@ i {
 }
 
 .btn-primary {
-  background-color: $color-primary;
+  background-color: $color-purple;
+  color: $color-white;
 
   &:hover {
-    filter: brightness(90%);
+    opacity: 0.8;
   }
 }
 
@@ -111,7 +112,7 @@ i {
   }
 }
 
-.outline-btn {
+.btn-outline {
   border: 1px solid $color-black;
   overflow: hidden;
 
@@ -156,5 +157,27 @@ i {
 
   &:hover::after {
     top: -30%;
+  }
+}
+
+.title {
+  text-align: center;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: -25%;
+    line-height: 110%;
+  }
+
+  span {
+    color: $color-purple;
+  }
+
+  p {
+    opacity: 0.75;
   }
 }

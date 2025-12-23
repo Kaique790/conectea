@@ -1,5 +1,4 @@
 body > header {
-  background-image: linear-gradient(to right, rgba(255, 205, 67, 0.4), rgba(255, 187, 0, 0.4));
   width: 100%;
   position: fixed;
   top: 0;
@@ -64,9 +63,6 @@ body > header .desktop-navbar .buttons a {
 }
 body > header .desktop-navbar .buttons a i {
   color: #000000;
-}
-body > header .desktop-navbar a {
-  color: #ffffff;
 }
 body > header .mobile-menu {
   display: flex;
@@ -224,6 +220,92 @@ body > header #mobile-navbar .close-navbar:hover {
   background: #ffbb00;
 }
 
+body > header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right, rgba(255, 205, 67, 0.7), rgba(255, 187, 0, 0.7));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: -1;
+}
+
+section.hero {
+  max-width: 1064px;
+  max-height: 100dvh;
+  margin: 0 auto;
+  margin-top: 4rem;
+  position: relative;
+  padding: 0 1rem;
+}
+section.hero h1 {
+  font-weight: 600;
+  font-size: 2.375rem;
+  line-height: 100%;
+  letter-spacing: -0.25px;
+  max-width: 390px;
+}
+section.hero h1 > span {
+  color: #8979ff;
+}
+section.hero .text > .buttons {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+section.hero .text > .buttons a.btn {
+  width: fit-content;
+}
+section.hero .image {
+  width: 100%;
+}
+section.hero .image .hero-img {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: auto;
+}
+section.hero .image .text {
+  position: absolute;
+  bottom: -1.2vh;
+  left: 50%;
+  width: 96vw;
+  transform: translate(-50%);
+}
+section.hero .image .text:first-of-type {
+  z-index: -1;
+}
+section.hero .retangle-w-logo {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  bottom: -31vw;
+}
+section.hero .line-1 {
+  position: absolute;
+  z-index: -1;
+  top: -5.25rem;
+  right: 0;
+  min-width: 100vw;
+}
+section.hero .line-2 {
+  position: absolute;
+  right: 0;
+  top: 13rem;
+}
+section.hero .faixa-autismo {
+  position: absolute;
+  right: 2.75rem;
+  top: 10rem;
+  width: 110px;
+  height: 170px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.about {
+  margin-top: 14.25rem;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -237,12 +319,6 @@ html {
   width: 100%;
   font-family: "poppins", sans-serif;
 }
-@media (width <= 500px) {
-  body,
-  html {
-    font-size: 96%;
-  }
-}
 
 html {
   scroll-behavior: smooth;
@@ -255,6 +331,8 @@ body {
   padding-top: 3.8125rem;
   min-width: 100%;
   max-width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -303,7 +381,7 @@ i {
   gap: 0.25rem;
   color: #000000;
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   transition: all 0.3s;
 }
 .btn i {
@@ -311,10 +389,11 @@ i {
 }
 
 .btn-primary {
-  background-color: #ffbb00;
+  background-color: #8979ff;
+  color: #ffffff;
 }
 .btn-primary:hover {
-  filter: brightness(90%);
+  opacity: 0.8;
 }
 
 .btn-dark {
@@ -325,12 +404,12 @@ i {
   filter: brightness(90%);
 }
 
-.outline-btn {
+.btn-outline {
   border: 1px solid #000000;
   overflow: hidden;
   position: relative;
 }
-.outline-btn::after {
+.btn-outline::after {
   content: " ";
   position: absolute;
   top: 100%;
@@ -342,7 +421,7 @@ i {
   background: #000000;
   transition: all 0.45s;
 }
-.outline-btn span {
+.btn-outline span {
   position: relative;
   z-index: 1;
   display: flex;
@@ -350,15 +429,34 @@ i {
   align-items: center;
   gap: 0.25rem;
 }
-.outline-btn span,
-.outline-btn i {
+.btn-outline span,
+.btn-outline i {
   transition: all 0.8s;
 }
-.outline-btn:hover {
+.btn-outline:hover {
   color: #ffffff;
 }
-.outline-btn:hover::after {
+.btn-outline:hover::after {
   top: -30%;
+}
+
+.title {
+  text-align: center;
+}
+.title h1,
+.title h2,
+.title h3,
+.title h4,
+.title h5,
+.title h6 {
+  letter-spacing: -25%;
+  line-height: 110%;
+}
+.title span {
+  color: #8979ff;
+}
+.title p {
+  opacity: 0.75;
 }
 
 /*# sourceMappingURL=main.css.map */
