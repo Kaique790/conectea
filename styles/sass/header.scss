@@ -4,10 +4,20 @@ body > header {
   width: 100%;
 
   position: fixed;
+  z-index: 1000;
+
   top: 0;
   left: 0;
 
-  z-index: 1000;
+  transition: all 0.3s;
+
+  &.hide {
+    top: -100%;
+  }
+
+  &.scrolled {
+    box-shadow: 4px 0px 10px 3px #00000015;
+  }
 
   & > div {
     display: flex;
