@@ -9,8 +9,6 @@ body > header {
 
   z-index: 1000;
 
-  box-shadow: 4px 0px 10px 3px #0000002c;
-
   & > div {
     display: flex;
     padding: 0.75rem 1rem;
@@ -260,6 +258,10 @@ body > header {
     width: 400px;
     max-width: 100%;
 
+    .btn {
+      width: 100%;
+    }
+
     a:hover #i-i,
     a:hover #w-i {
       color: $color-white;
@@ -297,8 +299,8 @@ body > header::before {
 
   background-image: linear-gradient(
     to right,
-    rgba(#ffcd43, 0.7),
-    rgba(#ffbb00, 0.7)
+    rgba(#ffcd43, 0.8),
+    rgba(#ffbb00, 0.8)
   );
 
   backdrop-filter: blur(6px);

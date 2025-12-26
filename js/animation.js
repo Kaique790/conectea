@@ -5,22 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Animate line-1
   {
     const path = document.getElementById("line-1");
-
-    const pathLength = path.getTotalLength();
-
-    path.style.strokeDasharray = pathLength;
-    path.style.strokeDashoffset = pathLength;
-
-    gsap.to(path, {
-      strokeDashoffset: 0,
-      duration: 5,
-      ease: "power2.out",
-    });
-  }
-
-  // Animate line-2
-  {
-    const path = document.getElementById("line-2");
     const img = document.querySelector(".faixa-autismo");
 
     const pathLength = path.getTotalLength();
@@ -28,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     path.style.strokeDasharray = pathLength;
     path.style.strokeDashoffset = pathLength;
 
-    const tl = gsap.timeline({ delay: 1.5 }); // espera 4s antes de começar tudo
+    const tl = gsap.timeline({ delay: 0.25 });
 
     tl.to(path, {
       strokeDashoffset: 0,
@@ -53,15 +37,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let split, animation;
 
     split = new SplitText(".chars-text", {
-      type: "chars",
+      type: "words",
     });
 
-    animation = gsap.from(split.chars, {
-      y: -60,
+    animation && animation.revert();
+
+    animation = gsap.from(split.words, {
+      y: -100,
       opacity: 0,
-      duration: 0.3,
-      ease: "power4.out",
-      stagger: 0.04,
+      rotation: "random(-80, 80)",
+      duration: 0.7,
+      ease: "back",
+      stagger: 0.15,
     });
   }
 
@@ -98,24 +85,51 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // boom animation
-  gsap.utils.toArray(".boom").forEach((topic) => {
-    gsap.fromTo(
-      topic,
-      {
-        opacity: 0,
-        scale: 0.8,
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        duration: 0.6,
-        ease: "back.out(1.7)", // 👈 boom elástico
-        scrollTrigger: {
-          trigger: topic,
-          start: "top 75%", // ~50% visível
-          toggleActions: "play reverse play reverse",
+  {
+    gsap.utils.toArray(".boom").forEach((topic) => {
+      gsap.fromTo(
+        topic,
+        {
+          opacity: 0,
+          scale: 0.8,
         },
-      }
-    );
-  });
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.6,
+          ease: "back.out(1.7)",
+          scrollTrigger: {
+            trigger: topic,
+            start: "top 75%",
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
+    });
+  }
+
+  // boom animation with delay
+  {
+    gsap.utils.toArray(".boom-delay").forEach((topic) => {
+      gsap.fromTo(
+        topic,
+        {
+          opacity: 0,
+          scale: 0.4,
+        },
+        {
+          delay: 1,
+          opacity: 1,
+          scale: 1,
+          duration: 0.3,
+          ease: "back.out(1.7)",
+          scrollTrigger: {
+            trigger: topic,
+            start: "top 75%",
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
+    });
+  }
 });

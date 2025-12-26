@@ -27,7 +27,6 @@ html {
 
 body {
   position: relative;
-  padding-top: 3.8125rem;
 
   min-width: 100%;
   max-width: 100%;
@@ -56,6 +55,27 @@ li {
 
 i {
   font-size: 1.875rem;
+}
+
+/* largura da barra */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* fundo da barra */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* parte que desliza */
+::-webkit-scrollbar-thumb {
+  background: $color-purple;
+}
+
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
 }
 
 .sr-only {
@@ -88,6 +108,8 @@ i {
   overflow: hidden;
   border-radius: 2rem;
   transition: all 0.3s;
+
+  width: fit-content;
 
   i {
     font-size: 1.15rem;

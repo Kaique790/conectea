@@ -14,6 +14,12 @@ $color-light-300: #d8d8d8;
   background: linear-gradient(to right, #ffcd43, #ffbb00);
 }
 
+@mixin space-y($space) {
+  & > *:not(:first-child) {
+    margin-top: $space;
+  }
+}
+
 // =============================
 // Tamanhos das fontes
 // =============================

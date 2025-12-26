@@ -1,7 +1,8 @@
 @use "variables.scss" as *;
 
 .about {
-  padding: calc(6.25rem + 8rem) 1rem;
+  padding-top: 6.25rem;
+  padding-inline: 1rem;
   position: relative;
 
   & > img {
@@ -106,7 +107,7 @@
   overflow: visible;
   position: absolute;
 
-  top: 4rem;
+  top: -5rem;
   left: 50%;
   transform: translateX(-50%);
 
