@@ -1,5 +1,4 @@
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 document.addEventListener("DOMContentLoaded", () => {
   // Animate line-1
@@ -54,12 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Animate line in about section
   {
-    const lenis = new Lenis();
-
-    lenis.on("scroll", ScrollTrigger.update);
-
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
+    const smoother = ScrollSmoother.create({
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
+      smooth: 1.2,
+      effects: true,
+      smoothTouch: false,
     });
 
     gsap.ticker.lagSmoothing(0);
@@ -125,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ease: "back.out(1.7)",
           scrollTrigger: {
             trigger: topic,
-            start: "top 75%",
+            start: "top 100%",
             toggleActions: "play reverse play reverse",
           },
         }
