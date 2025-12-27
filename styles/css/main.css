@@ -330,12 +330,14 @@ section.hero .hero-img {
 
 .about > .topic {
   padding: 2rem;
-  background: #f3f3f3;
+  background: rgba(243, 243, 243, 0.3137254902);
+  backdrop-filter: blur(6px);
   width: fit-content;
   border-radius: 2rem;
 }
 .about > .topic:nth-of-type(2) {
-  background-color: #eeebff;
+  background-color: rgba(197, 187, 255, 0.3843137255);
+  backdrop-filter: blur(6px);
   margin-left: auto;
   text-align: right;
 }
@@ -343,7 +345,8 @@ section.hero .hero-img {
   margin-left: auto;
 }
 .about > .topic:nth-of-type(3) {
-  background-color: #fff7e2;
+  background-color: hsla(43, 100%, 84%, 0.377);
+  backdrop-filter: blur(6px);
   margin-inline: auto;
   text-align: center;
 }

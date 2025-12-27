@@ -13,13 +13,17 @@
 
 .about > .topic {
   padding: 2rem;
-  background: #f3f3f3;
+  background: #f3f3f350;
+
+  backdrop-filter: blur(6px);
 
   width: fit-content;
   border-radius: 2rem;
 
   &:nth-of-type(2) {
-    background-color: #eeebff;
+    background-color: #c5bbff62;
+    backdrop-filter: blur(6px);
+
     margin-left: auto;
 
     text-align: right;
@@ -30,7 +34,9 @@
   }
 
   &:nth-of-type(3) {
-    background-color: #fff7e2;
+    background-color: hsla(43, 100%, 84%, 0.377);
+    backdrop-filter: blur(6px);
+
     margin-inline: auto;
 
     text-align: center;
