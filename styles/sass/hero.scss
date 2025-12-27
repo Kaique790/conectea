@@ -1,14 +1,41 @@
 @use "variables.scss" as *;
 
 section.hero {
-  max-width: 1132px;
-
-  padding: 0 1rem;
-  padding-top: calc(3.8125rem + 4rem); // header height + 64px
-
-  position: relative;
-
+  width: 100%;
   @include bg-gradient;
+
+  & > div {
+    padding: 0 1rem;
+    padding-top: calc(3.8125rem + 4rem); // header height + 64px
+
+    position: relative;
+
+    max-width: 1132px;
+    margin-inline: auto;
+
+    @media (width >= 700px) {
+      max-width: calc(100vw - (100vw - 1138px) / 2);
+      margin-inline: auto 0;
+
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (width >= 1138px) {
+      max-width: 1138px;
+      margin-inline: auto;
+    }
+  }
+
+  .left {
+    min-width: fit-content;
+  }
+
+  .right {
+    @media (width >= 700px) {
+      position: relative;
+    }
+  }
 
   .slogan {
     display: flex;
@@ -47,6 +74,10 @@ section.hero {
     display: inline-block;
 
     color: #252525;
+
+    @media (width >= 600px) {
+      max-width: 480px;
+    }
   }
 
   .fast-about {
@@ -84,22 +115,50 @@ section.hero {
     gap: 1rem;
   }
 
+  svg {
+    overflow: visible;
+  }
+
   .line-1 {
     position: absolute;
     right: -1vh;
     top: 17.5rem;
 
     opacity: 60%;
+
+    @media (width >= 500px) {
+      transform: scale(1.2);
+    }
+
+    @media (width >= 700px) {
+      right: 31.3rem;
+      top: 7.75rem;
+    }
   }
 
   .faixa-autismo {
     position: absolute;
-    right: 4vh;
+    right: 20px;
     top: 14.5rem;
 
     width: 125px;
 
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+
+    z-index: 1;
+
+    @media (width >= 500px) {
+      width: 180px;
+
+      top: 11.5rem;
+      right: 22px;
+    }
+
+    @media (width >= 700px) {
+      width: 190px;
+      top: 1rem;
+      right: 32rem;
+    }
   }
 
   .hero-img {
@@ -107,5 +166,16 @@ section.hero {
 
     display: block;
     margin-top: auto;
+
+    z-index: 1;
+    position: relative;
+
+    @media (width >= 700px) {
+      overflow: hidden;
+      min-width: 520px !important;
+
+      max-width: 600px;
+      margin-top: -3.5rem;
+    }
   }
 }

@@ -18,7 +18,7 @@ body > header > div {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  max-width: 1064px;
+  max-width: 1138px;
   width: 100%;
   margin: 0 auto;
 }
@@ -240,11 +240,37 @@ body > header::before {
 }
 
 section.hero {
-  max-width: 1132px;
+  width: 100%;
+  background: linear-gradient(to right, #ffcd43, #ffbb00);
+}
+section.hero > div {
   padding: 0 1rem;
   padding-top: 7.8125rem;
   position: relative;
-  background: linear-gradient(to right, #ffcd43, #ffbb00);
+  max-width: 1132px;
+  margin-inline: auto;
+}
+@media (width >= 700px) {
+  section.hero > div {
+    max-width: calc(100vw - (100vw - 1138px) / 2);
+    margin-inline: auto 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (width >= 1138px) {
+  section.hero > div {
+    max-width: 1138px;
+    margin-inline: auto;
+  }
+}
+section.hero .left {
+  min-width: fit-content;
+}
+@media (width >= 700px) {
+  section.hero .right {
+    position: relative;
+  }
 }
 section.hero .slogan {
   display: flex;
@@ -274,6 +300,11 @@ section.hero .hero-text {
   display: inline-block;
   color: #252525;
 }
+@media (width >= 600px) {
+  section.hero .hero-text {
+    max-width: 480px;
+  }
+}
 section.hero .fast-about {
   margin-top: 3rem;
   margin-bottom: 2rem;
@@ -299,23 +330,62 @@ section.hero .fast-about .buttons {
   display: flex;
   gap: 1rem;
 }
+section.hero svg {
+  overflow: visible;
+}
 section.hero .line-1 {
   position: absolute;
   right: -1vh;
   top: 17.5rem;
   opacity: 60%;
 }
+@media (width >= 500px) {
+  section.hero .line-1 {
+    transform: scale(1.2);
+  }
+}
+@media (width >= 700px) {
+  section.hero .line-1 {
+    right: 31.3rem;
+    top: 7.75rem;
+  }
+}
 section.hero .faixa-autismo {
   position: absolute;
-  right: 4vh;
+  right: 20px;
   top: 14.5rem;
   width: 125px;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+  z-index: 1;
+}
+@media (width >= 500px) {
+  section.hero .faixa-autismo {
+    width: 180px;
+    top: 11.5rem;
+    right: 22px;
+  }
+}
+@media (width >= 700px) {
+  section.hero .faixa-autismo {
+    width: 190px;
+    top: 1rem;
+    right: 32rem;
+  }
 }
 section.hero .hero-img {
   width: 90vw;
   display: block;
   margin-top: auto;
+  z-index: 1;
+  position: relative;
+}
+@media (width >= 700px) {
+  section.hero .hero-img {
+    overflow: hidden;
+    min-width: 520px !important;
+    max-width: 600px;
+    margin-top: -3.5rem;
+  }
 }
 
 .about {
