@@ -31,6 +31,25 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
+  // Animate signature
+  {
+    const path = document.getElementById("signature-path");
+    const length = path.getTotalLength();
+
+    gsap.set(path, {
+      strokeDasharray: length,
+      strokeDashoffset: length,
+      opacity: 0.45,
+    });
+
+    // anima escrita
+    gsap.to(path, {
+      strokeDashoffset: 0,
+      duration: 10,
+      ease: "power1.inOut",
+    });
+  }
+
   // Animate hero-title
   {
     let split, animation;
@@ -75,9 +94,9 @@ document.addEventListener("DOMContentLoaded", () => {
       strokeDashoffset: 0,
       ease: "none",
       scrollTrigger: {
-        trigger: document.body,
-        start: "top+=200 top",
-        end: "bottom+=400 bottom",
+        trigger: "#about",
+        start: "top-=100px center",
+        end: "bottom center",
         scrub: true,
       },
     });
@@ -129,6 +148,35 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         }
       );
+    });
+  }
+
+  // Animate porgress anel
+  {
+    const circle = document.querySelectorAll(".fill");
+
+    circle.forEach((circle) => {
+      const radius = 50;
+      const circumference = 2 * Math.PI * radius;
+
+      const percent = Number(circle.dataset.perc);
+
+      gsap.set(circle, {
+        strokeDasharray: circumference,
+        strokeDashoffset: circumference,
+      });
+
+      gsap.to(circle, {
+        strokeDashoffset: circumference * (1 - percent / 100),
+        duration: 3,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: circle,
+          start: "top 100%",
+          toggleActions: "play reverse play reverse",
+          once: false,
+        },
+      });
     });
   }
 });

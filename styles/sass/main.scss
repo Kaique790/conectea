@@ -2,6 +2,7 @@
 @use "./header.scss";
 @use "./hero.scss";
 @use "./about.scss";
+@use "./problems.scss";
 
 * {
   padding: 0;
@@ -193,6 +194,8 @@ i {
   h6 {
     letter-spacing: -25%;
     line-height: 110%;
+
+    font-size: $text-title;
   }
 
   span {
@@ -201,5 +204,6 @@ i {
 
   p {
     opacity: 0.75;
+    font-size: $text-sm;
   }
 }

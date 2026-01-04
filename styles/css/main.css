@@ -242,6 +242,12 @@ body > header::before {
 section.hero {
   width: 100%;
   background: linear-gradient(to right, #ffcd43, #ffbb00);
+  position: relative;
+}
+@media (width >= 700px) {
+  section.hero {
+    height: 100dvh;
+  }
 }
 section.hero > div {
   padding: 0 1rem;
@@ -270,6 +276,18 @@ section.hero .left {
 @media (width >= 700px) {
   section.hero .right {
     position: relative;
+  }
+  section.hero .right::after {
+    content: " ";
+    height: 1rem;
+    width: 100vw;
+    background: #f3b817;
+    position: absolute;
+    left: -60px;
+    bottom: 0;
+    z-index: 10;
+    border-top-left-radius: 9999rem;
+    border-bottom-left-radius: 9999rem;
   }
 }
 section.hero .slogan {
@@ -387,6 +405,17 @@ section.hero .hero-img {
     margin-top: -3.5rem;
   }
 }
+section.hero #signature {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+@media (width <= 700px) {
+  section.hero #signature {
+    display: none;
+  }
+}
 
 .about {
   padding-top: 6.25rem;
@@ -402,13 +431,13 @@ section.hero .hero-img {
 
 .about > .topic {
   padding: 2rem;
-  background: rgba(243, 243, 243, 0.3137254902);
+  background: rgba(243, 243, 243, 0.6705882353);
   backdrop-filter: blur(6px);
   width: fit-content;
   border-radius: 2rem;
 }
 .about > .topic:nth-of-type(2) {
-  background-color: rgba(197, 187, 255, 0.3843137255);
+  background-color: rgba(197, 187, 255, 0.6235294118);
   backdrop-filter: blur(6px);
   margin-left: auto;
   text-align: right;
@@ -417,7 +446,7 @@ section.hero .hero-img {
   margin-left: auto;
 }
 .about > .topic:nth-of-type(3) {
-  background-color: hsla(43, 100%, 84%, 0.377);
+  background-color: hsla(43, 100%, 84%, 0.733);
   backdrop-filter: blur(6px);
   margin-inline: auto;
   text-align: center;
@@ -479,6 +508,129 @@ section.hero .hero-img {
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
+}
+
+section.problems {
+  background: linear-gradient(to right, #ffcd43, #ffbb00);
+  border-top-left-radius: 100% 50px;
+  border-top-right-radius: 100% 50px;
+  border-bottom-left-radius: 100% 50px;
+  border-bottom-right-radius: 100% 50px;
+  margin-top: -12rem;
+}
+section.problems > div {
+  max-width: 1138px;
+  margin-inline: auto;
+  padding: 4em 1rem;
+  padding-bottom: 10rem;
+}
+
+section.problems .metrics-container {
+  margin: 0 auto;
+  margin-top: 4rem;
+  justify-content: center;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+@media (width >= 1280px) {
+  section.problems .metrics-container {
+    flex-wrap: nowrap;
+  }
+}
+
+section.problems .metrics-container article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem 1.75rem;
+  max-width: 400px;
+  border-radius: 1rem;
+  border: 1px solid #916a00;
+}
+@media (width >= 1000px) {
+  section.problems .metrics-container article {
+    min-width: 400px;
+  }
+}
+section.problems .metrics-container article:first-of-type {
+  height: 160px;
+}
+section.problems .metrics-container article .content > p {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+}
+section.problems .metrics-container article .content .link {
+  display: flex;
+  align-items: center;
+  opacity: 0.6;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  margin-top: 0.75rem;
+}
+section.problems .metrics-container article .metric-number {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #8979ff;
+}
+section.problems .metrics-container article .content .link > div {
+  background-color: #8979ff;
+  display: flex;
+  padding: 0 0.35rem;
+  border-radius: 9999rem;
+  align-items: center;
+  justify-content: center;
+}
+section.problems .metrics-container article .content .link > div i {
+  font-size: 1.25rem;
+  color: #ffbb00;
+}
+
+section.problems .metrics-container .percent {
+  position: relative;
+  width: 112px;
+  height: 112px;
+}
+section.problems .metrics-container .percent svg {
+  position: relative;
+  width: 112px;
+  height: 112px;
+  rotate: -90deg;
+}
+section.problems .metrics-container .percent svg circle {
+  width: 112px;
+  height: 112px;
+  fill: none;
+  stroke-width: 10;
+  stroke: #000;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 307;
+  stroke-dashoffset: 307;
+  stroke-linecap: round;
+}
+section.problems .metrics-container .percent svg circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #000;
+  opacity: 0.08;
+}
+section.problems .metrics-container .percent svg circle:nth-child(2) {
+  stroke-dashoffset: calc(300 - 300 * var(--perc) / 100);
+  stroke: #000;
+}
+section.problems .metrics-container .percent .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.problems .metrics-container .percent .number h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
 }
 
 * {
@@ -647,12 +799,14 @@ i {
 .title h6 {
   letter-spacing: -25%;
   line-height: 110%;
+  font-size: 2.375rem;
 }
 .title span {
   color: #8979ff;
 }
 .title p {
   opacity: 0.75;
+  font-size: 0.875rem;
 }
 
 /*# sourceMappingURL=main.css.map */

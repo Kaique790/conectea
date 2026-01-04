@@ -2,7 +2,13 @@
 
 section.hero {
   width: 100%;
+
   @include bg-gradient;
+  position: relative;
+
+  @media (width >= 700px) {
+    height: 100dvh;
+  }
 
   & > div {
     padding: 0 1rem;
@@ -34,6 +40,24 @@ section.hero {
   .right {
     @media (width >= 700px) {
       position: relative;
+
+      &::after {
+        content: " ";
+
+        height: 1rem;
+        width: 100vw;
+
+        background: #f3b817;
+
+        position: absolute;
+        left: -60px;
+        bottom: 0;
+
+        z-index: 10;
+
+        border-top-left-radius: 9999rem;
+        border-bottom-left-radius: 9999rem;
+      }
     }
   }
 
@@ -176,6 +200,17 @@ section.hero {
 
       max-width: 600px;
       margin-top: -3.5rem;
+    }
+  }
+
+  #signature {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    @media (width <= 700px) {
+      display: none;
     }
   }
 }

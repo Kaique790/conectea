@@ -16,7 +16,7 @@
 
 .about > .topic {
   padding: 2rem;
-  background: #f3f3f350;
+  background: #f3f3f3ab;
 
   backdrop-filter: blur(6px);
 
@@ -24,7 +24,7 @@
   border-radius: 2rem;
 
   &:nth-of-type(2) {
-    background-color: #c5bbff62;
+    background-color: #c5bbff9f;
     backdrop-filter: blur(6px);
 
     margin-left: auto;
@@ -37,7 +37,7 @@
   }
 
   &:nth-of-type(3) {
-    background-color: hsla(43, 100%, 84%, 0.377);
+    background-color: hsla(43, 100%, 84%, 0.733);
     backdrop-filter: blur(6px);
 
     margin-inline: auto;
