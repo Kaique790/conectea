@@ -657,7 +657,8 @@ section.problems .cards-grid .card {
   }
 }
 section.problems .cards-grid .card.object img {
-  width: 150px;
+  width: 100%;
+  max-width: 150px;
   filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.4509803922));
 }
 section.problems .cards-grid img.card {
