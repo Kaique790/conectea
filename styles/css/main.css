@@ -89,7 +89,7 @@ body > header .desktop-buttons .whatsapp-btn {
   background: #8979ff;
   color: #ffffff;
 }
-@media (width >= 748px) and (width <= 880px) {
+@media (width <= 880px) {
   body > header .desktop-buttons {
     display: none;
   }
@@ -739,6 +739,8 @@ section.about-app {
 }
 section.about-app .title {
   text-align: left;
+  max-width: 600px;
+  width: 100%;
 }
 section.about-app .buttons-container {
   margin-top: 2rem;
@@ -749,6 +751,101 @@ section.about-app img.preview {
   margin-top: 3rem;
   width: 100%;
   max-width: 600px;
+}
+@media (width >= 800px) {
+  section.about-app .title {
+    min-width: 600px;
+  }
+  section.about-app > header {
+    display: flex;
+  }
+  section.about-app img.preview {
+    transform: translateX(-10rem);
+  }
+}
+
+section.about-app .cards-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+@media (max-width: 767px) {
+  section.about-app .cards-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  section.about-app .cards-container article {
+    scroll-snap-align: start;
+  }
+}
+section.about-app .cards-container::-webkit-scrollbar {
+  display: none;
+}
+section.about-app .cards-container article {
+  border: 1px solid #9a9a9a;
+  border-radius: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2.5rem 1.375rem;
+  max-width: 340px;
+  min-width: 340px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+@media (width >= 800px) {
+  section.about-app .cards-container article:first-child {
+    margin-top: -14rem;
+    max-height: 384px;
+  }
+}
+section.about-app .cards-container article::before {
+  content: "";
+  background: #9a9a9a;
+  width: 220px;
+  height: 100px;
+  border-radius: 900%;
+  position: absolute;
+  top: -85px;
+}
+section.about-app .cards-container article > i {
+  color: #9a9a9a;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+section.about-app .cards-container article img {
+  height: 174px;
+  object-fit: cover;
+}
+section.about-app .cards-container article h4 {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+section.about-app .cards-container article p {
+  opacity: 0.6;
+  font-size: 0.875rem;
+}
+section.about-app .cards-container article .btn {
+  width: 100%;
+  font-size: 0.875rem;
+}
+@media (width <= 700px) {
+  section.about-app .cards-container article {
+    max-width: 280px;
+    min-width: 280px;
+  }
+}
+@media (width <= 700px) {
+  section.about-app .cards-container article {
+    max-width: 280px;
+    min-width: 280px;
+  }
 }
 
 * {
@@ -812,7 +909,7 @@ i {
 
 /* parte que desliza */
 ::-webkit-scrollbar-thumb {
-  background: #8979ff;
+  background: #000000;
 }
 
 /* hover */

@@ -118,7 +118,7 @@ body > header {
       color: $color-white;
     }
 
-    @media (width >= 748px) and (width <= 880px) {
+    @media (width <= 880px) {
       display: none;
     }
   }

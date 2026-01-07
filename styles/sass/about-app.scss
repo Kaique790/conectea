@@ -8,6 +8,9 @@ section.about-app {
 
   .title {
     text-align: left;
+
+    max-width: 600px;
+    width: 100%;
   }
 
   .buttons-container {
@@ -22,5 +25,122 @@ section.about-app {
 
     width: 100%;
     max-width: 600px;
+  }
+
+  @media (width>=800px) {
+    .title {
+      min-width: 600px;
+    }
+
+    & > header {
+      display: flex;
+    }
+
+    img.preview {
+      transform: translateX(-10rem);
+    }
+  }
+}
+
+section.about-app .cards-container {
+  display: flex;
+  gap: 2rem;
+
+  margin-top: 3rem;
+
+  @media (max-width: 767px) {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    article {
+      scroll-snap-align: start;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  article {
+    border: 1px solid $color-light-400;
+    border-radius: 45px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    padding: 2.5rem 1.375rem;
+
+    max-width: 340px;
+    min-width: 340px;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    &:first-child {
+      @media (width >= 800px) {
+        margin-top: -14rem;
+        max-height: 384px;
+      }
+    }
+
+    &::before {
+      content: "";
+
+      background: $color-light-400;
+
+      width: 220px;
+      height: 100px;
+
+      border-radius: 900%;
+      position: absolute;
+
+      top: -85px;
+    }
+
+    & > i {
+      color: $color-light-400;
+      font-size: 1.5rem;
+
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+
+    img {
+      height: 174px;
+      object-fit: cover;
+    }
+
+    h4 {
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    p {
+      opacity: 0.6;
+      font-size: $text-sm;
+    }
+
+    .btn {
+      width: 100%;
+      font-size: $text-sm;
+    }
+
+    @media (width <= 700px) {
+      max-width: 280px;
+      min-width: 280px;
+    }
+
+    @media (width <= 700px) {
+      max-width: 280px;
+      min-width: 280px;
+    }
   }
 }
