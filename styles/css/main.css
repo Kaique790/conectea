@@ -763,6 +763,13 @@ section.about-app img.preview {
     transform: translateX(-10rem);
   }
 }
+@media (width <= 800px) {
+  section.about-app img.preview {
+    display: block;
+    max-width: 500px;
+    margin-left: auto;
+  }
+}
 
 section.about-app .cards-container {
   display: flex;

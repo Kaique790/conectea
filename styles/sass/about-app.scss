@@ -40,6 +40,14 @@ section.about-app {
       transform: translateX(-10rem);
     }
   }
+
+  @media (width <= 800px) {
+    img.preview {
+      display: block;
+      max-width: 500px;
+      margin-left: auto;
+    }
+  }
 }
 
 section.about-app .cards-container {
