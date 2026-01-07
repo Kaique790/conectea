@@ -3,6 +3,7 @@
 @use "./hero.scss";
 @use "./about.scss";
 @use "./problems.scss";
+@use "./about-app.scss";
 
 * {
   padding: 0;
@@ -96,6 +97,32 @@ i {
   height: 1px;
 
   background-color: $color-black;
+}
+
+.slogan {
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  img {
+    width: 44px;
+  }
+
+  & > div {
+    line-height: 1;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: $text-sm;
+    opacity: 75%;
+
+    margin-top: 0.125rem;
+  }
 }
 
 .btn {

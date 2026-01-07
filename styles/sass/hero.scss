@@ -61,32 +61,6 @@ section.hero {
     }
   }
 
-  .slogan {
-    display: flex;
-    align-items: center;
-
-    gap: 0.5rem;
-
-    img {
-      width: 44px;
-    }
-
-    & > div {
-      line-height: 1;
-    }
-
-    h6 {
-      font-size: 1rem;
-    }
-
-    p {
-      font-size: $text-sm;
-      opacity: 75%;
-
-      margin-top: 0.125rem;
-    }
-  }
-
   .hero-text {
     font-size: 2.375rem;
     font-weight: bold;

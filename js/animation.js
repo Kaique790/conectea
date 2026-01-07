@@ -179,4 +179,36 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // Animate parallax text in about section
+  {
+    const spans = gsap.utils.toArray(".bg-text span");
+
+    gsap.to(spans, {
+      x: (i) => (i % 2 === 0 ? -200 : 200),
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+      },
+    });
+
+    const section = document.getElementById("about");
+    const text = document.querySelector(".absolute-wrapper");
+
+    const maxY = section.offsetHeight - window.innerHeight;
+
+    gsap.to(text, {
+      y: maxY,
+      ease: "none",
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    });
+  }
 });
