@@ -68,28 +68,58 @@ body > header {
       }
 
       li a {
-        transition: all 0.3s;
+        transition: all 0.2s;
         padding: 0.25rem 0.75rem;
+
+        display: flex;
+        align-items: center;
+
+        gap: 0.375rem;
+
+        text-shadow: 0px 0px 12px #00000073;
+      }
+
+      li a i {
+        font-size: 1.5rem;
+        transition: all 0.2s;
       }
 
       li a:hover {
-        background: $color-primary;
+        letter-spacing: 1.5px;
       }
-    }
 
-    .buttons {
-      display: flex;
+      li a:hover i {
+        rotate: -15deg;
+      }
 
-      a {
-        font-size: $text-sm;
-        align-items: center;
-        display: flex;
-        color: $color-black;
-
-        i {
-          color: $color-black;
+      @media (width >= 748px) and (width <= 880px) {
+        .md {
+          display: none;
         }
       }
+    }
+  }
+
+  .desktop-buttons {
+    display: flex;
+
+    a {
+      font-size: $text-sm;
+      align-items: center;
+      display: flex;
+    }
+
+    i {
+      color: $color-white;
+    }
+
+    .whatsapp-btn {
+      background: $color-purple;
+      color: $color-white;
+    }
+
+    @media (width >= 748px) and (width <= 880px) {
+      display: none;
     }
   }
 
@@ -111,7 +141,7 @@ body > header {
       }
     }
 
-    @media (width >= 748px) {
+    @media (width >= 880px) {
       display: none;
     }
   }
@@ -136,7 +166,7 @@ body > header {
 
     box-shadow: -2px 0px 6px #00000017;
 
-    @media (width >= 748px) {
+    @media (width >= 880px) {
       display: none;
     }
   }
@@ -156,7 +186,7 @@ body > header {
     background: #24242418;
     backdrop-filter: blur(6px);
 
-    @media (width >= 748px) {
+    @media (width >= 880px) {
       display: none;
     }
   }
