@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollTrigger: {
         trigger: "#about",
         start: "top center",
-        end: "bottom center",
+        end: "bottom bottom",
         scrub: true,
       },
     });
