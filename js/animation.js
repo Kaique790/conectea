@@ -50,23 +50,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Animate hero-title
+  // Animate titles
   {
-    let split, animation;
+    gsap.utils.toArray(".chars-text").forEach((text) => {
+      let split = new SplitText(text, {
+        type: "words",
+      });
 
-    split = new SplitText(".chars-text", {
-      type: "words",
-    });
-
-    animation && animation.revert();
-
-    animation = gsap.from(split.words, {
-      y: -100,
-      opacity: 0,
-      rotation: "random(-80, 80)",
-      duration: 0.7,
-      ease: "back",
-      stagger: 0.15,
+      gsap.from(split.words, {
+        y: -100,
+        opacity: 0,
+        rotation: "random(-80, 80)",
+        duration: 0.7,
+        ease: "back.out(1.7)",
+        stagger: 0.15,
+        scrollTrigger: {
+          trigger: text,
+          start: "top 80%",
+          toggleActions: "play reverse play reverse",
+        },
+      });
     });
   }
 
