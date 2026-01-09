@@ -4,6 +4,7 @@
 @use "./about.scss";
 @use "./problems.scss";
 @use "./about-app.scss";
+@use "./more-app.scss";
 
 * {
   padding: 0;
@@ -203,6 +204,56 @@ i {
 
   &:hover {
     color: $color-white;
+  }
+
+  &:hover::after {
+    top: -30%;
+  }
+}
+
+.btn-outline-light {
+  border: 1px solid $color-white;
+  overflow: hidden;
+
+  color: $color-white;
+
+  position: relative;
+
+  &::after {
+    content: " ";
+    position: absolute;
+
+    top: 100%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 150%;
+    height: 150%;
+
+    border-radius: 100%;
+
+    background: $color-white;
+    transition: all 0.45s;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  span,
+  i {
+    transition: all 0.8s;
+  }
+
+  &:hover {
+    color: $color-black;
   }
 
   &:hover::after {
