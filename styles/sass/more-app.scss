@@ -33,7 +33,7 @@ section#more-app {
 
     .mockup > img {
       width: 100%;
-      max-width: 340px;
+      max-width: 300px;
 
       object-fit: cover;
       margin-left: -1rem;
@@ -111,33 +111,44 @@ section#more-app .cards-container {
   position: relative;
   z-index: 10;
 
-  &:first-of-type {
-    .scroll-list {
-      animation: jump-left 8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
-    }
-  }
-
-  &.last {
-    .scroll-list {
-      animation: jump-right 8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
-    }
-  }
-
   &:hover .scroll-list {
     animation-play-state: paused;
   }
 
   @media (width >= 748px) {
     max-width: 344px;
+
+    &:first-of-type {
+      .scroll-list {
+        animation: jump-left 8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+      }
+    }
+
+    &.last {
+      .scroll-list {
+        animation: jump-right 8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+      }
+    }
   }
 }
 
 section#more-app .scroll-list {
   padding: 1rem;
-  min-width: fit-content;
 
   display: flex;
   gap: 2rem;
+
+  @media (width <= 748px) {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
 
   &::-webkit-scrollbar {
     display: none;

@@ -33,3 +33,36 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
+
+const sliders = document.querySelectorAll(".scroll-list");
+
+sliders.forEach((slider) => {
+  let startX;
+  let scrollLeft;
+  let isDown = false;
+
+  slider.addEventListener("mousedown", (e) => {
+    isDown = true;
+
+    startX = e.pageX - slider.scrollLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener("mouseleave", () => {
+    isDown = false;
+  });
+
+  slider.addEventListener("mouseup", () => {
+    isDown = false;
+  });
+
+  slider.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const jump = (x - startX) * 2;
+
+    slider.scrollLeft = scrollLeft - jump;
+  });
+});
