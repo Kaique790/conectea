@@ -557,7 +557,6 @@ section.problems {
   margin-top: -2rem;
 }
 section.problems > div {
-  max-width: 1138px;
   margin-inline: auto;
   padding: 4em 1rem;
   padding-bottom: 10rem;
@@ -729,6 +728,18 @@ section.problems .cards-grid .card.text:last-of-type {
   section.problems .cards-grid .card.text:last-of-type {
     grid-column: span 1 2;
     grid-row: 2;
+  }
+}
+@media (width >= 1280px) {
+  section.problems .cards-grid {
+    grid-template-columns: 297px 297px minmax(0, 297px) minmax(0, 297px);
+  }
+  section.problems .cards-grid .card.text:last-of-type {
+    grid-column: span 1 2;
+    grid-row: 2;
+  }
+  section.problems .cards-grid .card.text {
+    height: 297px;
   }
 }
 

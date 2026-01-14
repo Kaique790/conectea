@@ -12,7 +12,6 @@ section.problems {
   margin-top: -2rem;
 
   & > div {
-    max-width: 1138px;
     margin-inline: auto;
 
     padding: 4em 1rem;
@@ -229,6 +228,19 @@ section.problems .cards-grid {
     .card.text:last-of-type {
       grid-column: span 1 2;
       grid-row: 2;
+    }
+  }
+
+  @media (width >= 1280px) {
+    grid-template-columns: 297px 297px minmax(0, 297px) minmax(0, 297px);
+
+    .card.text:last-of-type {
+      grid-column: span 1 2;
+      grid-row: 2;
+    }
+
+    .card.text {
+      height: 297px;
     }
   }
 }
