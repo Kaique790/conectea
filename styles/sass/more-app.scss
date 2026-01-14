@@ -1,7 +1,8 @@
 @use "variables" as *;
 
 section#more-app {
-  margin-top: 6.25rem;
+  padding-top: 6.25rem;
+  background-color: #f7f7f7;
 
   & > div:first-of-type {
     max-width: 1138px;
@@ -38,12 +39,23 @@ section#more-app {
       margin-left: -1rem;
 
       filter: brightness(1.1);
+      z-index: 100;
     }
   }
 
   @media (width >= 748px) {
     display: flex;
+
+    align-items: center;
+    justify-content: center;
+
     position: relative;
+    margin: 0 auto;
+
+    & > div:first-of-type {
+      margin: 0;
+      margin-right: 10rem;
+    }
 
     &::before {
       content: "";
@@ -55,7 +67,7 @@ section#more-app {
       bottom: 0;
 
       @include bg-gradient;
-      z-index: -1;
+      z-index: 0;
     }
   }
 }
@@ -76,8 +88,6 @@ section#more-app .wrapper-cards-container {
     top: 0;
 
     @include bg-gradient;
-    z-index: -1;
-
     @media (width >= 748px) {
       display: none;
     }
@@ -85,7 +95,6 @@ section#more-app .wrapper-cards-container {
 
   .slogan {
     margin-top: 4rem;
-
     padding-inline: 1rem;
   }
 
@@ -100,57 +109,17 @@ section#more-app .cards-container {
   display: flex;
 
   position: relative;
-
-  .fade-right,
-  .fade-left {
-    width: 100px;
-    height: 100%;
-
-    position: absolute;
-    top: 0;
-
-    z-index: 100;
-  }
-
-  .fade-right {
-    background-image: linear-gradient(to left, #ffbb00, rgba(0, 0, 0, 0));
-    right: 0;
-  }
-
-  .fade-left {
-    background-image: linear-gradient(to right, #ffcd43, rgba(0, 0, 0, 0));
-    left: 0;
-  }
+  z-index: 10;
 
   &:first-of-type {
     .scroll-list {
-      animation: spin-left 12s linear infinite;
-    }
-
-    @media (width >= 748px) {
-      .fade-right {
-        background-image: linear-gradient(to left, #ffffff, rgba(0, 0, 0, 0));
-      }
-
-      .fade-left {
-        background-image: linear-gradient(to right, #ffffff, rgba(0, 0, 0, 0));
-      }
+      animation: jump-left 8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
     }
   }
 
   &.last {
     .scroll-list {
-      animation: spin-right 12s linear infinite;
-    }
-
-    @media (width >= 748px) {
-      .fade-right {
-        background-image: linear-gradient(to left, #ffcd43, rgba(0, 0, 0, 0));
-      }
-
-      .fade-left {
-        background-image: linear-gradient(to right, #ffcd43, rgba(0, 0, 0, 0));
-      }
+      animation: jump-right 8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
     }
   }
 
@@ -159,25 +128,13 @@ section#more-app .cards-container {
   }
 
   @media (width >= 748px) {
-    .fade-right {
-      background-image: linear-gradient(to left, #ffffff, rgba(0, 0, 0, 0));
-      right: 0;
-    }
-
-    .fade-left {
-      background-image: linear-gradient(to right, #ffffff, rgba(0, 0, 0, 0));
-      left: 0;
-    }
-
-    max-width: 350px;
+    max-width: 344px;
   }
 }
 
 section#more-app .scroll-list {
   padding: 1rem;
   min-width: fit-content;
-
-  overflow-x: scroll;
 
   display: flex;
   gap: 2rem;
@@ -275,22 +232,40 @@ section#more-app .scroll-list {
   }
 }
 
-@keyframes spin-left {
-  from {
-    transform: translate(0%);
-  }
-
-  to {
-    transform: translate(-100%);
-  }
+@keyframes jump-left {
+  0%,
+  20% {
+    transform: translateX(0);
+  } // Parado no 1º card
+  25%,
+  45% {
+    transform: translateX(-332px);
+  } // Pula e para no 2º
+  50%,
+  70% {
+    transform: translateX(-664px);
+  } // Pula e para no 3º
+  75%,
+  100% {
+    transform: translateX(0);
+  } // Retorno suave ao início
 }
 
-@keyframes spin-right {
-  from {
-    transform: translate(-100%);
-  }
-
-  to {
-    transform: translate(0%);
-  }
+@keyframes jump-right {
+  0%,
+  20% {
+    transform: translateX(-664px);
+  } // Parado no 1º card
+  25%,
+  45% {
+    transform: translateX(-332px);
+  } // Pula e para no 2º
+  50%,
+  70% {
+    transform: translateX(-0px);
+  } // Pula e para no 3º
+  75%,
+  100% {
+    transform: translateX(-664px);
+  } // Retorno suave ao início
 }
