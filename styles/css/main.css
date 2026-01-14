@@ -745,8 +745,7 @@ section.problems .cards-grid .card.text:last-of-type {
 
 section.about-app {
   padding: 0 1rem;
-  max-width: 1138px;
-  margin: 0 auto;
+  width: 100vw;
 }
 section.about-app .title {
   max-width: 600px;
@@ -780,7 +779,6 @@ section.about-app .buttons-container {
 
 section.about-app .mockup {
   position: relative;
-  width: 100%;
   margin: 0 auto;
   margin-top: 8rem;
   display: flex;
@@ -789,12 +787,17 @@ section.about-app .mockup {
 }
 section.about-app .mockup .ambient {
   width: 130vw;
-  max-width: 1200px;
+  max-width: 1500px;
+}
+@media (width >= 1000px) {
+  section.about-app .mockup .ambient {
+    min-width: 1400px;
+  }
 }
 section.about-app .mockup .screens {
   position: absolute;
   z-index: 10;
-  top: -4rem;
+  top: -5rem;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -802,8 +805,11 @@ section.about-app .mockup .screens {
 }
 
 section#more-app {
-  padding-top: 6.25rem;
-  background-color: #f7f7f7;
+  padding-top: 4rem;
+  background-color: #f3f3f3;
+  box-shadow: 0px -10px 8px rgba(0, 0, 0, 0.0823529412);
+  position: relative;
+  z-index: 100;
 }
 section#more-app > div:first-of-type {
   max-width: 1138px;
