@@ -806,7 +806,6 @@ section.about-app .mockup .screens {
 
 section#more-app {
   padding-top: 4rem;
-  background-color: #f3f3f3;
   box-shadow: 0px -10px 8px rgba(0, 0, 0, 0.0823529412);
   position: relative;
   z-index: 100;
@@ -827,6 +826,10 @@ section#more-app .container {
   margin: 0 auto;
   margin-top: 3rem;
   max-width: 1138px;
+  z-index: 100;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 section#more-app .container .mockup {
   display: flex;
@@ -834,10 +837,19 @@ section#more-app .container .mockup {
 section#more-app .container .mockup > img {
   width: 100%;
   max-width: 300px;
+  min-width: 274px;
   object-fit: cover;
   margin-left: -1rem;
   filter: brightness(1.1);
-  z-index: 100;
+}
+section#more-app .container .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: -3rem;
+}
+section#more-app .container .buttons a {
+  white-space: nowrap;
 }
 @media (width >= 748px) {
   section#more-app {
@@ -849,7 +861,6 @@ section#more-app .container .mockup > img {
   }
   section#more-app > div:first-of-type {
     margin: 0;
-    margin-right: 10rem;
   }
   section#more-app::before {
     content: "";
@@ -859,6 +870,11 @@ section#more-app .container .mockup > img {
     bottom: 0;
     background: linear-gradient(to right, #ffcd43, #ffbb00);
     z-index: 0;
+  }
+}
+@media (width >= 940px) {
+  section#more-app > div:first-of-type {
+    margin-right: 10rem;
   }
 }
 
