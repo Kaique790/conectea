@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Animate porgress anel
+  // Animate progress anel
   {
     const circle = document.querySelectorAll(".fill");
 
@@ -214,25 +214,4 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
-
-  // {
-  //   gsap.registerPlugin(ScrollTrigger);
-
-  //   const wrapper = document.querySelector("#about-app .cards-container");
-
-  //   const scrollWidth = wrapper.scrollWidth - window.innerWidth;
-
-  //   gsap.to(wrapper, {
-  //     x: -scrollWidth,
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: "#about-app",
-  //       start: "top+=400 top",
-  //       end: () => `+=${wrapper.scrollWidth}`,
-  //       scrub: true,
-  //       pin: true,
-  //       anticipatePin: 1,
-  //     },
-  //   });
-  // }
 });
