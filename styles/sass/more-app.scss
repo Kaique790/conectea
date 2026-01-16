@@ -173,6 +173,9 @@ section#more-app .scroll-list {
     &:active {
       cursor: grabbing;
     }
+
+    &.no-select {
+    }
   }
 
   &::-webkit-scrollbar {
