@@ -702,6 +702,27 @@ section.problems .cards-grid .card.text {
 section.problems .cards-grid .card.text:last-of-type {
   background-color: #000000;
   color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+section.problems .cards-grid .card.text:last-of-type::before, section.problems .cards-grid .card.text:last-of-type::after {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  opacity: 0.2;
+  filter: blur(100px);
+}
+section.problems .cards-grid .card.text:last-of-type::after {
+  left: -60px;
+  top: -60px;
+  opacity: 0.12;
+}
+section.problems .cards-grid .card.text:last-of-type::before {
+  right: -60px;
+  bottom: -60px;
 }
 @media (width <= 600px) or (width >= 1000px) {
   section.problems .cards-grid .card.object,
@@ -902,7 +923,18 @@ section#more-app .wrapper-cards-container::before {
 }
 section#more-app .wrapper-cards-container .slogan {
   margin-top: 4rem;
+  padding-bottom: 2rem;
   padding-inline: 1rem;
+}
+@media (width >= 748px) {
+  section#more-app .wrapper-cards-container .slogan {
+    margin-left: -50vw;
+  }
+}
+@media (width >= 940px) {
+  section#more-app .wrapper-cards-container .slogan {
+    margin-left: -38rem;
+  }
 }
 @media (width >= 748px) {
   section#more-app .wrapper-cards-container {

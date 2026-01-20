@@ -124,7 +124,16 @@ section#more-app .wrapper-cards-container {
 
   .slogan {
     margin-top: 4rem;
+    padding-bottom: 2rem;
     padding-inline: 1rem;
+
+    @media (width >= 748px) {
+      margin-left: -50vw;
+    }
+
+    @media (width >= 940px) {
+      margin-left: -38rem;
+    }
   }
 
   @media (width >= 748px) {

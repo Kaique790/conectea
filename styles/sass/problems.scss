@@ -212,6 +212,37 @@ section.problems .cards-grid {
     &:last-of-type {
       background-color: $color-black;
       color: $color-white;
+
+      position: relative;
+      overflow: hidden;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+
+        border-radius: 100%;
+
+        width: 200px;
+        height: 200px;
+        background-color: #fff;
+
+        opacity: 0.2;
+
+        filter: blur(100px);
+      }
+
+      &::after {
+        left: -60px;
+        top: -60px;
+
+        opacity: 0.12;
+      }
+
+      &::before {
+        right: -60px;
+        bottom: -60px;
+      }
     }
   }
 
