@@ -27,26 +27,36 @@
   width: fit-content;
   border-radius: 2rem;
 
-  &:nth-of-type(2) {
+  &:nth-of-type(3) {
     background-color: #c5bbff9f;
     backdrop-filter: blur(6px);
 
     margin-left: auto;
-
     text-align: right;
+
+    .buttons {
+      align-items: end;
+      justify-content: end;
+
+      margin-inline: auto 0;
+    }
 
     .header {
       margin-left: auto;
     }
   }
 
-  &:nth-of-type(3) {
+  &:nth-of-type(4) {
     background-color: hsla(43, 100%, 84%, 0.733);
     backdrop-filter: blur(6px);
 
     margin-inline: auto;
 
     text-align: center;
+
+    .buttons {
+      margin-inline: auto;
+    }
 
     .header {
       margin-inline: auto;
@@ -100,15 +110,6 @@
     width: fit-content;
 
     margin-top: 1.5rem;
-  }
-
-  &:nth-of-type(2) > .buttons {
-    margin-left: auto;
-    align-items: end;
-  }
-
-  &:nth-of-type(3) > .buttons {
-    margin-inline: auto;
   }
 
   a.btn {

@@ -21,6 +21,10 @@ html {
   width: 100%;
 
   font-family: "poppins", sans-serif;
+
+  @media (width <= 640px) {
+    font-size: 90%;
+  }
 }
 
 html {
