@@ -798,13 +798,24 @@ section.about-app .mockup .ambient {
 section.about-app .mockup .screens {
   position: absolute;
   z-index: 10;
+  animation: float 2s ease-in-out infinite;
   top: -5rem;
   left: 50%;
-  transform: translateX(-50%);
   width: 100%;
   max-width: 900px;
 }
 
+@keyframes float {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
 section#more-app {
   padding-top: 4rem;
   box-shadow: 0px -10px 8px rgba(0, 0, 0, 0.0823529412);
@@ -842,6 +853,11 @@ section#more-app .container .mockup > img {
   object-fit: cover;
   margin-left: -1rem;
   filter: brightness(1.1);
+}
+@media (width <= 640px) {
+  section#more-app .container .mockup > img {
+    min-width: 200px;
+  }
 }
 section#more-app .container .buttons {
   display: flex;
