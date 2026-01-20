@@ -1,7 +1,44 @@
 @use "./variables.scss" as *;
 
 #team {
-  padding-top: 6.25rem;
+  padding-block: 6.25rem;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: $color-primary;
+
+    position: absolute;
+
+    width: 65px;
+    height: 394px;
+
+    border-radius: 100%;
+
+    opacity: 0.25;
+
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    left: -55px;
+  }
+
+  &::after {
+    right: -55px;
+  }
+
+  @media (width >= 440px) {
+    &::before {
+      left: -50px;
+    }
+
+    &::after {
+      right: -50px;
+    }
+  }
 
   .cards-container {
     margin-top: 4rem;
@@ -51,11 +88,15 @@
     position: relative;
 
     margin-left: -5rem;
-    max-width: 340px;
-    min-width: 280px;
+    max-width: 324px;
+    min-width: 290px;
 
     padding: 1rem;
     padding-inline: 5rem 2rem;
+
+    @media (width >= 640px) {
+      min-width: 324px;
+    }
   }
 
   h4 {

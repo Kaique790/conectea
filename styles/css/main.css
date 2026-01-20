@@ -264,14 +264,13 @@ body > header::before {
 }
 
 section.hero {
+  max-width: 100vw;
   width: 100%;
   background: linear-gradient(to right, #ffcd43, #ffbb00);
   position: relative;
-}
-@media (width >= 700px) {
-  section.hero {
-    height: 100dvh;
-  }
+  border-bottom-left-radius: 100% 100px;
+  border-bottom-right-radius: 100% 100px;
+  overflow: hidden;
 }
 section.hero > div {
   padding: 0 1rem;
@@ -300,18 +299,6 @@ section.hero .left {
 @media (width >= 700px) {
   section.hero .right {
     position: relative;
-  }
-  section.hero .right::after {
-    content: " ";
-    height: 1rem;
-    width: 100vw;
-    background: #f3b817;
-    position: absolute;
-    left: -60px;
-    bottom: 0;
-    z-index: 10;
-    border-top-left-radius: 9999rem;
-    border-bottom-left-radius: 9999rem;
   }
 }
 section.hero .hero-text {
@@ -1058,7 +1045,33 @@ section#more-app .scroll-list article img {
   }
 }
 #team {
-  padding-top: 6.25rem;
+  padding-block: 6.25rem;
+  position: relative;
+}
+#team::before, #team::after {
+  content: "";
+  background-color: #ffbb00;
+  position: absolute;
+  width: 65px;
+  height: 394px;
+  border-radius: 100%;
+  opacity: 0.25;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#team::before {
+  left: -55px;
+}
+#team::after {
+  right: -55px;
+}
+@media (width >= 440px) {
+  #team::before {
+    left: -50px;
+  }
+  #team::after {
+    right: -50px;
+  }
 }
 #team .cards-container {
   margin-top: 4rem;
@@ -1098,10 +1111,15 @@ section#more-app .scroll-list article img {
   border-radius: 1.5rem;
   position: relative;
   margin-left: -5rem;
-  max-width: 340px;
-  min-width: 280px;
+  max-width: 324px;
+  min-width: 290px;
   padding: 1rem;
   padding-inline: 5rem 2rem;
+}
+@media (width >= 640px) {
+  #team .cards-container .card .content {
+    min-width: 324px;
+  }
 }
 #team .cards-container .card h4 {
   font-size: 1rem;

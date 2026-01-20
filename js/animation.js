@@ -27,27 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
         scale: 1,
         duration: 0.7,
         ease: "elastic.out(1, 0.5)",
-      }
+      },
     );
-  }
-
-  // Animate signature
-  {
-    const path = document.getElementById("signature-path");
-    const length = path.getTotalLength();
-
-    gsap.set(path, {
-      strokeDasharray: length,
-      strokeDashoffset: length,
-      opacity: 0.45,
-    });
-
-    // anima escrita
-    gsap.to(path, {
-      strokeDashoffset: 0,
-      duration: 10,
-      ease: "power1.inOut",
-    });
   }
 
   // Animate titles
@@ -124,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
             start: "top 75%",
             toggleActions: "play reverse play reverse",
           },
-        }
+        },
       );
     });
   }
@@ -149,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
             start: "top 100%",
             toggleActions: "play reverse play reverse",
           },
-        }
+        },
       );
     });
   }
