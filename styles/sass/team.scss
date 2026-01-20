@@ -31,6 +31,8 @@
   align-items: center;
   transition: all 0.3s;
 
+  max-width: 100%;
+
   gap: 1rem;
 
   &:hover {
@@ -50,7 +52,7 @@
 
     margin-left: -5rem;
     max-width: 340px;
-    min-width: 340px;
+    min-width: 280px;
 
     padding: 1rem;
     padding-inline: 5rem 2rem;
@@ -62,7 +64,7 @@
 
   p {
     font-size: $text-sm;
-    max-width: 180px;
+    max-width: 150px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
