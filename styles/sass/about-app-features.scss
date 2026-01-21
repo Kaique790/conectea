@@ -5,7 +5,7 @@ section.about-app-features {
   width: 100%;
 
   background: #f9f9f9;
-  padding: 4rem 1.5625rem; // 64px 25px (Figma)
+  padding: 4rem 1.5625rem;
   box-shadow: 0px -10px 8px #00000015;
   position: relative;
   z-index: 100;
@@ -129,6 +129,8 @@ section.about-app-features {
 
   .app-feature-card__media-curve {
     z-index: 1;
+    margin-top: auto;
+    margin-bottom: -0.5rem;
   }
 
 

@@ -940,6 +940,8 @@ section.about-app-features .cards {
 }
 .app-feature-card--centralizando .app-feature-card__media-curve {
   z-index: 1;
+  margin-top: auto;
+  margin-bottom: -0.5rem;
 }
 .app-feature-card--centralizando .app-feature-card__content {
   padding-bottom: 0;
