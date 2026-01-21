@@ -98,8 +98,8 @@ section.about-app-features {
 
 .app-feature-card__media-bg {
   position: absolute;
-  right: -9rem;
-  bottom: -14rem;
+  right: -144px;
+  bottom: -224px;
 
   width: 110%;
   height: auto;
@@ -123,8 +123,8 @@ section.about-app-features {
 
   .app-feature-card__media-main {
     position: absolute;
-    right: -8rem;
-    bottom: -15.5rem;
+    right: -128px;
+    bottom: -248px;
   }
 
   .app-feature-card__media-curve {
@@ -153,6 +153,29 @@ section.about-app-features {
 .app-feature-card--rotina .app-feature-card__media-fig {
   width: 254px;
   max-width: 85%;
+}
+
+@media (width <=480px) {
+  .app-feature-card--centralizando {
+
+    .app-feature-card__media-main {
+      position: absolute;
+      right: -100px;
+      bottom: -160px;
+    }
+  }
+
+  .app-feature-card__media-bg {
+    right: -125px;
+    bottom: -190px;
+  }
+}
+
+@media (width <=410px) {
+  .app-feature-card__media-bg {
+    right: -100px;
+    bottom: -160px;
+  }
 }
 
 @media (width >=768px) {
@@ -201,8 +224,8 @@ section.about-app-features {
 
     .app-feature-card__media-bg {
       // no 768px o "bg" aparece mais deslocado para a direita
-      right: -12rem;
-      bottom: -12rem;
+      right: -192px;
+      bottom: -192px;
       width: 500px;
 
       rotate: -10deg;
@@ -219,8 +242,8 @@ section.about-app-features {
     }
 
     .app-feature-card--centralizando .app-feature-card__media-main {
-      right: -11rem;
-      bottom: -9rem;
+      right: -176px;
+      bottom: -144px;
       width: 500px;
 
       rotate: -20deg;

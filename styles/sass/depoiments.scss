@@ -1,0 +1,140 @@
+section#depoiments {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(255, 205, 67, 1) 0%, rgba(255, 187, 0, 1) 100%);
+  padding: 3.25rem 1.0625rem; // 52px 17px
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; // 32px
+}
+
+.depoiments__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem; // 12px
+  max-width: 394px;
+  width: 100%;
+  text-align: center;
+
+  h2 {
+    font-size: 2.375rem; // 38px
+    font-weight: 700;
+    line-height: 1em;
+    color: #000000;
+    max-width: 312px;
+
+    span {
+      color: #8979ff;
+    }
+  }
+
+  p {
+    font-size: 0.875rem; // 14px
+    font-weight: 400;
+    line-height: 1em;
+    color: #000000;
+    opacity: 0.75;
+  }
+}
+
+.depoiments__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.625rem; // 58px
+  padding-top: 2rem; // 32px
+  width: 100%;
+  max-width: 340px;
+}
+
+.depoiment-card {
+  background: linear-gradient(
+    134deg,
+    rgba(254, 65, 46, 1) 4%,
+    rgba(255, 148, 74, 0.75) 28%,
+    rgba(254, 65, 46, 1) 54%,
+    rgba(254, 60, 82, 0.5) 68%,
+    rgba(253, 111, 135, 1) 93%
+  );
+  border-radius: 45px;
+  padding: 2.625rem 2rem; // 42px 32px
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; // 32px
+  position: relative;
+  width: 100%;
+}
+
+.depoiment-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; // 20px
+}
+
+.depoiment-card__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.125rem; // 18px
+}
+
+.depoiment-card__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.depoiment-card__info {
+  display: flex;
+  flex-direction: column;
+  width: 156px;
+}
+
+.depoiment-card__info h3 {
+  font-size: 1.25rem; // 20px
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #000000;
+  margin: 0;
+}
+
+.depoiment-card__subtitle {
+  font-size: 0.875rem; // 14px
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #000000;
+  opacity: 0.75;
+  margin: 0;
+}
+
+.depoiment-card__text {
+  font-size: 1.625rem; // 26px
+  font-weight: 400;
+  line-height: 1.1em;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin: 0;
+  max-width: 269px;
+}
+
+.depoiment-card__button {
+  align-self: stretch;
+  border-radius: 55px;
+  padding: 0.5rem 1rem; // 8px 16px
+  font-size: 0.875rem; // 14px
+  font-weight: 400;
+  line-height: 1.5em;
+  border-color: #000000;
+  color: #000000;
+}
+
+.depoiment-card__quotes {
+  position: absolute;
+  top: -0.875rem; // -14px
+  right: 4.875rem; // aproximadamente 78px (262px from left of 340px card)
+  width: 21px;
+  height: 27px;
+  pointer-events: none;
+}

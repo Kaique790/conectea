@@ -914,8 +914,8 @@ section.about-app-features .cards {
 
 .app-feature-card__media-bg {
   position: absolute;
-  right: -9rem;
-  bottom: -14rem;
+  right: -144px;
+  bottom: -224px;
   width: 110%;
   height: auto;
   pointer-events: none;
@@ -935,8 +935,8 @@ section.about-app-features .cards {
 }
 .app-feature-card--centralizando .app-feature-card__media-main {
   position: absolute;
-  right: -8rem;
-  bottom: -15.5rem;
+  right: -128px;
+  bottom: -248px;
 }
 .app-feature-card--centralizando .app-feature-card__media-curve {
   z-index: 1;
@@ -962,6 +962,23 @@ section.about-app-features .cards {
   max-width: 85%;
 }
 
+@media (width <= 480px) {
+  .app-feature-card--centralizando .app-feature-card__media-main {
+    position: absolute;
+    right: -100px;
+    bottom: -160px;
+  }
+  .app-feature-card__media-bg {
+    right: -125px;
+    bottom: -190px;
+  }
+}
+@media (width <= 410px) {
+  .app-feature-card__media-bg {
+    right: -100px;
+    bottom: -160px;
+  }
+}
 @media (width >= 768px) {
   section.about-app-features {
     padding: 4rem 1.5625rem;
@@ -997,8 +1014,8 @@ section.about-app-features .cards {
     margin: 0;
   }
   section.about-app-features .app-feature-card__media-bg {
-    right: -12rem;
-    bottom: -12rem;
+    right: -192px;
+    bottom: -192px;
     width: 500px;
     rotate: -10deg;
   }
@@ -1011,8 +1028,8 @@ section.about-app-features .cards {
     pointer-events: none;
   }
   section.about-app-features .app-feature-card--centralizando .app-feature-card__media-main {
-    right: -11rem;
-    bottom: -9rem;
+    right: -176px;
+    bottom: -144px;
     width: 500px;
     rotate: -20deg;
   }
@@ -1038,6 +1055,137 @@ section.about-app-features .cards {
     max-width: none;
   }
 }
+section#depoiments {
+  width: 100%;
+  background: linear-gradient(90deg, rgb(255, 205, 67) 0%, rgb(255, 187, 0) 100%);
+  padding: 3.25rem 1.0625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.depoiments__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 394px;
+  width: 100%;
+  text-align: center;
+}
+.depoiments__header h2 {
+  font-size: 2.375rem;
+  font-weight: 700;
+  line-height: 1em;
+  color: #000000;
+  max-width: 312px;
+}
+.depoiments__header h2 span {
+  color: #8979ff;
+}
+.depoiments__header p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1em;
+  color: #000000;
+  opacity: 0.75;
+}
+
+.depoiments__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.625rem;
+  padding-top: 2rem;
+  width: 100%;
+  max-width: 340px;
+}
+
+.depoiment-card {
+  background: linear-gradient(134deg, rgb(254, 65, 46) 4%, rgba(255, 148, 74, 0.75) 28%, rgb(254, 65, 46) 54%, rgba(254, 60, 82, 0.5) 68%, rgb(253, 111, 135) 93%);
+  border-radius: 45px;
+  padding: 2.625rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  width: 100%;
+}
+
+.depoiment-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.depoiment-card__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.125rem;
+}
+
+.depoiment-card__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.depoiment-card__info {
+  display: flex;
+  flex-direction: column;
+  width: 156px;
+}
+
+.depoiment-card__info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #000000;
+  margin: 0;
+}
+
+.depoiment-card__subtitle {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #000000;
+  opacity: 0.75;
+  margin: 0;
+}
+
+.depoiment-card__text {
+  font-size: 1.625rem;
+  font-weight: 400;
+  line-height: 1.1em;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin: 0;
+  max-width: 269px;
+}
+
+.depoiment-card__button {
+  align-self: stretch;
+  border-radius: 55px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5em;
+  border-color: #000000;
+  color: #000000;
+}
+
+.depoiment-card__quotes {
+  position: absolute;
+  top: -0.875rem;
+  right: 4.875rem;
+  width: 21px;
+  height: 27px;
+  pointer-events: none;
+}
+
 section#more-app {
   padding-top: 4rem;
   position: relative;
