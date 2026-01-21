@@ -133,7 +133,6 @@ section.about-app-features {
     margin-bottom: -0.5rem;
   }
 
-
   .app-feature-card__content {
     padding-bottom: 0;
   }
@@ -146,8 +145,9 @@ section.about-app-features {
 }
 
 .app-feature-card--instrucoes .app-feature-card__media-fig {
-  width: 190px;
-  max-width: 70%;
+  width: 210px;
+
+  transform: scaleX(-1);
 }
 
 .app-feature-card--rotina .app-feature-card__media-fig {
@@ -157,7 +157,6 @@ section.about-app-features {
 
 @media (width <=480px) {
   .app-feature-card--centralizando {
-
     .app-feature-card__media-main {
       position: absolute;
       right: -100px;
@@ -185,7 +184,6 @@ section.about-app-features {
     .cards {
       max-width: 743px; // largura do frame 768px no Figma
     }
-
 
     .app-feature-card {
       flex-direction: row;
@@ -230,7 +228,6 @@ section.about-app-features {
 
       rotate: -10deg;
     }
-
 
     .app-feature-card--centralizando .app-feature-card__media {
       position: absolute;

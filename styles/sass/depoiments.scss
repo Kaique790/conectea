@@ -1,6 +1,10 @@
 section#depoiments {
   width: 100%;
-  background: linear-gradient(90deg, rgba(255, 205, 67, 1) 0%, rgba(255, 187, 0, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 205, 67, 1) 0%,
+    rgba(255, 187, 0, 1) 100%
+  );
   padding: 3.25rem 1.0625rem; // 52px 17px
   display: flex;
   flex-direction: column;
@@ -50,11 +54,11 @@ section#depoiments {
 .depoiment-card {
   background: linear-gradient(
     134deg,
-    rgba(254, 65, 46, 1) 4%,
-    rgba(255, 148, 74, 0.75) 28%,
-    rgba(254, 65, 46, 1) 54%,
-    rgba(254, 60, 82, 0.5) 68%,
-    rgba(253, 111, 135, 1) 93%
+    rgba(254, 63, 46, 0.219) 4%,
+    rgba(255, 149, 74, 0.233) 28%,
+    rgba(254, 63, 46, 0.096) 54%,
+    rgba(254, 60, 83, 0.267) 68%,
+    rgba(253, 111, 135, 0.151) 93%
   );
   border-radius: 45px;
   padding: 2.625rem 2rem; // 42px 32px
@@ -120,14 +124,7 @@ section#depoiments {
 }
 
 .depoiment-card__button {
-  align-self: stretch;
-  border-radius: 55px;
-  padding: 0.5rem 1rem; // 8px 16px
-  font-size: 0.875rem; // 14px
-  font-weight: 400;
-  line-height: 1.5em;
-  border-color: #000000;
-  color: #000000;
+  min-width: 100%;
 }
 
 .depoiment-card__quotes {

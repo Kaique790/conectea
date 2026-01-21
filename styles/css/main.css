@@ -953,8 +953,8 @@ section.about-app-features .cards {
 }
 
 .app-feature-card--instrucoes .app-feature-card__media-fig {
-  width: 190px;
-  max-width: 70%;
+  width: 210px;
+  transform: scaleX(-1);
 }
 
 .app-feature-card--rotina .app-feature-card__media-fig {
@@ -1102,7 +1102,7 @@ section#depoiments {
 }
 
 .depoiment-card {
-  background: linear-gradient(134deg, rgb(254, 65, 46) 4%, rgba(255, 148, 74, 0.75) 28%, rgb(254, 65, 46) 54%, rgba(254, 60, 82, 0.5) 68%, rgb(253, 111, 135) 93%);
+  background: linear-gradient(134deg, rgba(254, 63, 46, 0.219) 4%, rgba(255, 149, 74, 0.233) 28%, rgba(254, 63, 46, 0.096) 54%, rgba(254, 60, 83, 0.267) 68%, rgba(253, 111, 135, 0.151) 93%);
   border-radius: 45px;
   padding: 2.625rem 2rem;
   display: flex;
@@ -1167,14 +1167,7 @@ section#depoiments {
 }
 
 .depoiment-card__button {
-  align-self: stretch;
-  border-radius: 55px;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.5em;
-  border-color: #000000;
-  color: #000000;
+  min-width: 100%;
 }
 
 .depoiment-card__quotes {
