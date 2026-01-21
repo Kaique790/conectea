@@ -824,6 +824,215 @@ section.about-app .mockup .screens {
     transform: translateX(-50%) translateY(0);
   }
 }
+section.about-app-features {
+  display: block;
+  width: 100%;
+  background: #f9f9f9;
+  padding: 4rem 1.5625rem;
+}
+section.about-app-features .cards {
+  width: 100%;
+  max-width: 439px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.app-feature-card {
+  background: #ffffff;
+  border: 1px solid #c8c8c8;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.app-feature-card__content {
+  padding: 2.25rem 2.125rem 0;
+}
+
+.app-feature-card__content h3 {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.app-feature-card__content p {
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.75;
+}
+
+.app-feature-card__tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 1.5rem;
+}
+
+.app-feature-card__tags li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  padding: 1px 11px;
+  border-radius: 999px;
+  background: #ffde84;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.app-feature-card__media {
+  position: relative;
+  width: 100%;
+  min-height: 180px;
+}
+
+.app-feature-card__media-main {
+  display: block;
+  width: min(120%, 520px);
+  height: auto;
+  margin: 0 auto;
+}
+
+.app-feature-card__media-curve {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  margin: 0 auto;
+}
+
+.app-feature-card__media-bg {
+  position: absolute;
+  right: -9rem;
+  bottom: -14rem;
+  width: 110%;
+  height: auto;
+  pointer-events: none;
+}
+
+.app-feature-card__media-fig {
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+
+.app-feature-card--centralizando {
+  gap: 1.25rem;
+}
+.app-feature-card--centralizando .app-feature-card__media-main {
+  position: absolute;
+  right: -8rem;
+  bottom: -15.5rem;
+}
+.app-feature-card--centralizando .app-feature-card__media-curve {
+  z-index: 1;
+}
+.app-feature-card--centralizando .app-feature-card__content {
+  padding-bottom: 0;
+}
+.app-feature-card--centralizando .app-feature-card__media {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+.app-feature-card--instrucoes .app-feature-card__media-fig {
+  width: 190px;
+  max-width: 70%;
+}
+
+.app-feature-card--rotina .app-feature-card__media-fig {
+  width: 254px;
+  max-width: 85%;
+}
+
+@media (width >= 768px) {
+  section.about-app-features {
+    padding: 4rem 1.5625rem;
+  }
+  section.about-app-features .cards {
+    max-width: 743px;
+  }
+  section.about-app-features .app-feature-card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    max-height: 288px;
+    min-height: 288px;
+    padding: 2.25rem 2.125rem;
+  }
+  section.about-app-features .app-feature-card__content {
+    padding: 0;
+    flex: 1;
+    max-width: 534px;
+  }
+  section.about-app-features .app-feature-card__tags {
+    margin-top: 1rem;
+  }
+  section.about-app-features .app-feature-card__media {
+    max-height: 288px;
+    flex: 0 0 240px;
+    min-height: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  section.about-app-features .app-feature-card__media-fig {
+    margin: 0;
+  }
+  section.about-app-features .app-feature-card__media-bg {
+    right: -12rem;
+    bottom: -12rem;
+    width: 500px;
+    rotate: -10deg;
+  }
+  section.about-app-features .app-feature-card--centralizando .app-feature-card__media {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    min-height: 0;
+    display: block;
+    pointer-events: none;
+  }
+  section.about-app-features .app-feature-card--centralizando .app-feature-card__media-main {
+    right: -11rem;
+    bottom: -9rem;
+    width: 500px;
+    rotate: -20deg;
+  }
+  section.about-app-features .app-feature-card--centralizando .app-feature-card__media-curve {
+    position: absolute;
+    bottom: 0;
+    right: -5.5rem;
+    width: 420px;
+    margin: 0;
+  }
+  section.about-app-features .app-feature-card--instrucoes .app-feature-card__media {
+    flex-basis: 210px;
+  }
+  section.about-app-features .app-feature-card--instrucoes .app-feature-card__media-fig {
+    width: 190px;
+    max-width: none;
+  }
+  section.about-app-features .app-feature-card--rotina .app-feature-card__media {
+    flex-basis: 270px;
+  }
+  section.about-app-features .app-feature-card--rotina .app-feature-card__media-fig {
+    width: 254px;
+    max-width: none;
+  }
+}
 section#more-app {
   padding-top: 4rem;
   box-shadow: 0px -10px 8px rgba(0, 0, 0, 0.0823529412);

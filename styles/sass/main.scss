@@ -4,6 +4,7 @@
 @use "./about.scss";
 @use "./problems.scss";
 @use "./about-app.scss";
+@use "./about-app-features.scss";
 @use "./more-app.scss";
 @use "./team.scss";
 
@@ -22,7 +23,7 @@ html {
 
   font-family: "poppins", sans-serif;
 
-  @media (width <= 640px) {
+  @media (width <=640px) {
     font-size: 90%;
   }
 }
@@ -115,7 +116,7 @@ i {
     width: 44px;
   }
 
-  & > div {
+  &>div {
     line-height: 1;
   }
 
