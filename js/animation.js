@@ -128,7 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
           scrollTrigger: {
             trigger: topic,
             start: "top 100%",
-            toggleActions: "play reverse play reverse",
           },
         },
       );

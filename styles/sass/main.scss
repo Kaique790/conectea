@@ -1,3 +1,4 @@
+@use "./pre-load.scss";
 @use "./variables.scss" as *;
 @use "./header.scss";
 @use "./hero.scss";
@@ -117,7 +118,7 @@ i {
     width: 44px;
   }
 
-  &>div {
+  & > div {
     line-height: 1;
   }
 

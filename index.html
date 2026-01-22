@@ -42,7 +42,14 @@
       type="image/x-icon"
     />
   </head>
-  <body>
+  <body onLoad="loading()">
+    <div class="box-load">
+      <div class="pre"></div>
+      <div class="loading-bar">
+        <span></span>
+      </div>
+    </div>
+
     <header id="header">
       <div>
         <img
