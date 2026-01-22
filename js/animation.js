@@ -195,4 +195,34 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
+
+  // Animate depoiments cards
+  {
+    const featureCards = document.querySelectorAll(".app-feature-card");
+
+    featureCards.forEach((card) => {
+      gsap.fromTo(
+        card,
+        {
+          x: 1000,
+          opacity: 0,
+
+          rotate: -95,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          rotate: 0,
+
+          duration: 1.5,
+          ease: "elastic.out(1,0.5)",
+
+          scrollTrigger: {
+            start: "top center",
+            trigger: card,
+          },
+        },
+      );
+    });
+  }
 });
