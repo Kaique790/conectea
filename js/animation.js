@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Animate depoiments cards
+  // Animate feature cards
   {
     const featureCards = document.querySelectorAll(".app-feature-card");
 
@@ -219,6 +219,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
           scrollTrigger: {
             start: "top center",
+            trigger: card,
+          },
+        },
+      );
+    });
+  }
+
+  // Animate depoiments cards
+  {
+    const depoimentCard = document.querySelectorAll(".depoiment-card");
+
+    depoimentCard.forEach((card) => {
+      gsap.fromTo(
+        card,
+        {
+          scale: 0,
+          opacity: 0,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+
+          duration: 1.5,
+          ease: "elastic.out(1,0.5)",
+
+          scrollTrigger: {
+            start: "top center",
+
+            toggleActions: "play reverse play reverse",
             trigger: card,
           },
         },
