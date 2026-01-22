@@ -1,6 +1,15 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
-document.addEventListener("DOMContentLoaded", () => {
+function loading() {
+  setTimeout(() => {
+    document.getElementsByClassName("box-load")[0].style.display = "none";
+    document.getElementById("smooth-wrapper").style.display = "block";
+
+    initGSAP();
+  }, 3000);
+}
+
+function initGSAP() {
   // Animate line-1
   {
     const path = document.getElementById("line-1");
@@ -251,4 +260,4 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
   }
-});
+}

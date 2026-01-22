@@ -66,10 +66,3 @@ sliders.forEach((slider) => {
     slider.scrollLeft = scrollLeft - jump;
   });
 });
-
-function loading() {
-  setTimeout(() => {
-    document.getElementsByClassName("box-load")[0].style.display = "none";
-    document.getElementById("smooth-wrapper").style.display = "block";
-  }, 3000);
-}
