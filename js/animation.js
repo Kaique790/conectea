@@ -245,8 +245,6 @@ document.addEventListener("DOMContentLoaded", () => {
           ease: "elastic.out(1,0.5)",
 
           scrollTrigger: {
-            start: "top center",
-
             toggleActions: "play reverse play reverse",
             trigger: card,
           },
