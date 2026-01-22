@@ -5,7 +5,7 @@ section#depoiments {
     rgba(255, 205, 67, 1) 0%,
     rgba(255, 187, 0, 1) 100%
   );
-  padding: 3.25rem 1.0625rem; // 52px 17px
+  padding: 6.25rem 1.0625rem; // 52px 17px
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +17,6 @@ section#depoiments {
   flex-direction: column;
   align-items: center;
   gap: 0.75rem; // 12px
-  max-width: 394px;
   width: 100%;
   text-align: center;
 
@@ -26,7 +25,6 @@ section#depoiments {
     font-weight: 700;
     line-height: 1em;
     color: #000000;
-    max-width: 312px;
 
     span {
       color: #8979ff;
@@ -43,22 +41,25 @@ section#depoiments {
 }
 
 .depoiments__cards {
-  display: flex;
-  flex-direction: column;
-  gap: 3.625rem; // 58px
-  padding-top: 2rem; // 32px
   width: 100%;
-  max-width: 340px;
+  display: flex;
+
+  justify-content: center;
+  margin-top: 3rem;
+
+  gap: 2rem;
+
+  flex-wrap: wrap;
 }
 
 .depoiment-card {
   background: linear-gradient(
     134deg,
-    rgba(254, 63, 46, 0.219) 4%,
-    rgba(255, 149, 74, 0.233) 28%,
-    rgba(254, 63, 46, 0.096) 54%,
-    rgba(254, 60, 83, 0.267) 68%,
-    rgba(253, 111, 135, 0.151) 93%
+    #ffb73b 4%,
+    #ffc53d 28%,
+    #ffb634 54%,
+    #ffc53d 68%,
+    #ffb73b 93%
   );
   border-radius: 45px;
   padding: 2.625rem 2rem; // 42px 32px
@@ -67,6 +68,8 @@ section#depoiments {
   gap: 2rem; // 32px
   position: relative;
   width: 100%;
+  max-width: 340px;
+  max-height: fit-content;
 }
 
 .depoiment-card__content {

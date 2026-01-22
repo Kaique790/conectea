@@ -1,9 +1,10 @@
 @use "variables" as *;
 
 section#more-app {
-  padding-top: 4rem;
   position: relative;
   z-index: 100;
+
+  margin-top: 6.25rem;
 
   & > div:first-of-type {
     max-width: 1138px;
