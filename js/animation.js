@@ -6,7 +6,7 @@ function loading() {
     document.getElementById("smooth-wrapper").style.display = "block";
 
     initGSAP();
-  }, 3000);
+  }, 0);
 }
 
 function initGSAP() {
@@ -259,5 +259,61 @@ function initGSAP() {
         },
       );
     });
+  }
+
+  // Animate parallax text in cta section
+  {
+    const spans = gsap.utils.toArray(".bg-text span");
+
+    gsap.to(spans, {
+      x: (i) => (i % 2 === 0 ? 100 : -100),
+      ease: "none",
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#cta",
+        start: "top-=100px",
+        end: "bottom",
+        scrub: true,
+        invalidateOnRefresh: true,
+      },
+    });
+
+    const section = document.getElementById("cta");
+    const text = document.querySelector(".absolute-wrapper");
+
+    const maxY = section.offsetHeight - window.innerHeight;
+
+    gsap.to(text, {
+      y: maxY,
+      ease: "none",
+      scrollTrigger: {
+        trigger: section,
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+      },
+    });
+  }
+
+  // animate cta elements
+  {
+    gsap.fromTo(
+      "#cta-content",
+      {
+        scale: 0,
+        opacity: 0,
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: "#cta",
+          start: "top+=100px",
+          end: "bottom+=100px",
+          pin: true,
+          scrub: 1,
+        },
+      },
+    );
   }
 }

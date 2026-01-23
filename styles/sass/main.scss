@@ -9,6 +9,7 @@
 @use "./depoiments.scss";
 @use "./more-app.scss";
 @use "./team.scss";
+@use "./cta.scss";
 
 * {
   padding: 0;
@@ -41,9 +42,8 @@ body {
 
   min-width: 100%;
   max-width: 100%;
-
-  overflow-x: hidden;
   min-height: 100vh;
+
   overflow: hidden;
 }
 

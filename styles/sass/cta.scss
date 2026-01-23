@@ -1,0 +1,69 @@
+#cta {
+  position: relative;
+  max-width: 1138px;
+  margin: 0 auto;
+
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    padding-inline: 1rem;
+    display: flex;
+    gap: 2rem;
+
+    width: 100%;
+    max-width: 1138px;
+  }
+
+  .content .text {
+    width: 50%;
+
+    p {
+      margin-top: 1rem;
+    }
+  }
+
+  .content .img {
+    width: 50%;
+    height: 400px;
+
+    background: #000;
+  }
+
+  .content .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    margin-top: 3rem;
+  }
+
+  .absolute-wrapper {
+    position: absolute;
+    inset: 0; // top: 0; right: 0; bottom: 0; left: 0;
+    opacity: 0.45;
+
+    display: flex;
+    align-items: center; // centro vertical
+    justify-content: center; // centro horizontal
+  }
+
+  .bg-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .bg-text span {
+    font-size: 8vw;
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+    font-weight: 700;
+    display: inline-block;
+  }
+}
