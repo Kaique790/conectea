@@ -263,57 +263,58 @@ function initGSAP() {
 
   // Animate parallax text in cta section
   {
-    const spans = gsap.utils.toArray(".bg-text span");
-
-    gsap.to(spans, {
-      x: (i) => (i % 2 === 0 ? 100 : -100),
-      ease: "none",
-      opacity: 0,
+    const ctaTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: "#cta",
-        start: "top-=100px",
-        end: "bottom",
-        scrub: true,
+        start: "top-=100", // começa assim que entra na tela
+        end: "+=500",
+        scrub: 0.8,
         invalidateOnRefresh: true,
       },
     });
 
-    const section = document.getElementById("cta");
-    const text = document.querySelector(".absolute-wrapper");
-
-    const maxY = section.offsetHeight - window.innerHeight;
-
-    gsap.to(text, {
-      y: maxY,
-      ease: "none",
-      scrollTrigger: {
-        trigger: section,
-        start: "top center",
-        end: "bottom center",
-        scrub: true,
+    // Texto de fundo (fromTo = garante que aparece)
+    ctaTimeline.fromTo(
+      ".bg-text span",
+      {
+        x: 0,
+        opacity: 1,
       },
-    });
-  }
+      {
+        x: (i) => (i % 2 === 0 ? 100 : -100),
+        opacity: 0,
+        ease: "none",
+      },
+      0.6,
+    );
 
-  // animate cta elements
-  {
-    gsap.fromTo(
+    // Movimento vertical do texto de fundo
+    ctaTimeline.fromTo(
+      ".absolute-wrapper",
+      {
+        y: 0,
+      },
+      {
+        y: "80%",
+        ease: "none",
+      },
+      0,
+    );
+
+    // Conteúdo principal
+    ctaTimeline.fromTo(
       "#cta-content",
       {
         scale: 0,
         opacity: 0,
       },
       {
+        y: "80%",
         scale: 1,
         opacity: 1,
-        scrollTrigger: {
-          trigger: "#cta",
-          start: "top+=100px",
-          end: "bottom+=100px",
-          pin: true,
-          scrub: 1,
-        },
+        ease: "power2.out",
       },
+      1,
     );
   }
 }
