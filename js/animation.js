@@ -6,7 +6,7 @@ function loading() {
     document.getElementById("smooth-wrapper").style.display = "block";
 
     initGSAP();
-  }, 0);
+  }, 1600);
 }
 
 function initGSAP() {
@@ -266,7 +266,7 @@ function initGSAP() {
     const ctaTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: "#cta",
-        start: "top-=100", // começa assim que entra na tela
+        start: "top-=100",
         end: "+=500",
         scrub: 0.8,
         invalidateOnRefresh: true,
@@ -289,13 +289,12 @@ function initGSAP() {
     );
 
     // Movimento vertical do texto de fundo
+
     ctaTimeline.fromTo(
       ".absolute-wrapper",
+      { y: 0 },
       {
-        y: 0,
-      },
-      {
-        y: "80%",
+        y: "400px",
         ease: "none",
       },
       0,
@@ -309,10 +308,10 @@ function initGSAP() {
         opacity: 0,
       },
       {
-        y: "80%",
+        y: "400px",
         scale: 1,
         opacity: 1,
-        ease: "power2.out",
+        ease: "none.",
       },
       1,
     );
