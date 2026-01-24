@@ -272,7 +272,6 @@ function initGSAP() {
         end: "+=500",
         scrub: 0.8,
         invalidateOnRefresh: true,
-        markers: true,
       },
     });
 
