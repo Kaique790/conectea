@@ -263,6 +263,8 @@ function initGSAP() {
 
   // Animate parallax text in cta section
   {
+    gsap.set(".bg-text span", { x: 0 });
+
     const ctaTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: "#cta",
@@ -270,6 +272,7 @@ function initGSAP() {
         end: "+=500",
         scrub: 0.8,
         invalidateOnRefresh: true,
+        markers: true,
       },
     });
 
@@ -282,10 +285,11 @@ function initGSAP() {
       },
       {
         x: (i) => (i % 2 === 0 ? 100 : -100),
+
         opacity: 0,
         ease: "none",
       },
-      0.6,
+      0,
     );
 
     // Movimento vertical do texto de fundo
@@ -294,7 +298,7 @@ function initGSAP() {
       ".absolute-wrapper",
       { y: 0 },
       {
-        y: "400px",
+        y: "550px",
         ease: "none",
       },
       0,
@@ -313,7 +317,7 @@ function initGSAP() {
         opacity: 1,
         ease: "none.",
       },
-      1,
+      0.3,
     );
   }
 }
