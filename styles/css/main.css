@@ -1661,6 +1661,12 @@ section#more-app .scroll-list article img {
   }
 }
 #cta .content .text p {
+  margin-top: 0.5rem;
+}
+#cta .content .text h2 {
+  font-size: 1.25rem;
+}
+#cta .content .text h2:last-of-type {
   margin-top: 1rem;
 }
 @media (width >= 768px) {
@@ -1669,8 +1675,8 @@ section#more-app .scroll-list article img {
   }
 }
 #cta .content .img {
-  height: 400px;
-  background: #000;
+  flex: 1;
+  object-fit: cover;
 }
 @media (width >= 768px) {
   #cta .content .img {
