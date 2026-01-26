@@ -1705,6 +1705,254 @@ section#more-app .scroll-list article img {
   display: inline-block;
 }
 
+section#pricing {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  position: relative;
+}
+section#pricing .highlight {
+  background-color: #8979ff;
+  border-radius: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: fit-content;
+}
+section#pricing .highlight .featured-badge {
+  padding: 1rem;
+  color: #ffffff;
+  font-size: 1.125rem;
+}
+section#pricing .pricing-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  z-index: 10;
+  position: relative;
+}
+section#pricing .pricing-header h2,
+section#pricing .pricing-header p {
+  text-align: left;
+}
+section#pricing .pricing-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 10;
+  position: relative;
+}
+@media (width >= 900px) {
+  section#pricing .pricing-cards {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+}
+section#pricing .pricing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 1px solid #dadada;
+  border-radius: 45px;
+  min-width: fit-content;
+  padding: 2.25rem 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+section#pricing .pricing-card.featured {
+  border: 3px solid #8979ff;
+  z-index: 10;
+  max-width: 100%;
+}
+section#pricing .pricing-card.featured .pricing-card__header {
+  display: flex;
+  flex-direction: column;
+}
+section#pricing .pricing-card.featured .pricing-card__header .pricing {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+}
+section#pricing .pricing-card .pricing-card__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  border-bottom: 1px solid #dadada;
+  padding: 0 1.625rem;
+  padding-bottom: 2rem;
+}
+section#pricing .pricing-card .pricing-card__header h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0;
+  color: #000000;
+}
+section#pricing .pricing-card .pricing-card__header .price {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #000000;
+  opacity: 0.29;
+  margin: 0;
+}
+section#pricing .pricing-card .pricing-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 1.625rem;
+}
+section#pricing .pricing-card .pricing-card__feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+section#pricing .pricing-card .pricing-card__feature-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+section#pricing .pricing-card .pricing-card__feature-list li .feature-text {
+  max-width: 230px;
+  line-height: 1;
+  color: #000000;
+  margin: 0;
+}
+section#pricing .pricing-card .pricing-card__feature-list li .feature-text.semi-bold {
+  font-weight: 600;
+}
+section#pricing .pricing-card .pricing-card__feature-list li i {
+  color: #5fd218;
+}
+section#pricing .pricing-card .pricing-card__feature-list li i.not-feature {
+  color: #a92c20;
+}
+section#pricing .pricing-card .pricing-card__cta {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 55px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+section#pricing .pricing-card .pricing-card__cta i {
+  font-size: 1.125rem;
+}
+section#pricing .pricing-card .pricing-card__cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+section#pricing .line-pricing {
+  position: absolute;
+  top: -50px;
+  rotate: 15deg;
+  right: 0;
+}
+section#pricing .logo {
+  position: absolute;
+  width: 96px;
+  right: -80px;
+  top: 45px;
+}
+@media (width <= 1222px) {
+  section#pricing .pricing-header h2 {
+    font-size: 2rem;
+  }
+  section#pricing .pricing-header p {
+    font-size: 1rem;
+  }
+  section#pricing .pricing-cards {
+    gap: 2rem;
+    padding-top: 2rem;
+    margin-top: 6rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    anchor-name: --pricing-cards;
+    scroll-snap-type: x mandatory;
+  }
+  section#pricing .pricing-cards::-webkit-scrollbar {
+    display: none;
+  }
+  section#pricing .pricing-cards::scroll-button(left),
+  section#pricing .pricing-cards::scroll-button(right) {
+    border: none;
+    color: #000000;
+    background-color: #ececec;
+    border-radius: 100%;
+    font-size: 2rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 1rem;
+    width: fit-content;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --pricing-cards;
+    position-area: left top;
+    font-family: consolas;
+    line-height: 1;
+  }
+  section#pricing .pricing-cards::scroll-button(left):disabled,
+  section#pricing .pricing-cards::scroll-button(right):disabled {
+    opacity: 0.4;
+    cursor: auto;
+  }
+  section#pricing .pricing-cards::scroll-button(right) {
+    content: ">";
+    transform: translateX(96px);
+  }
+  section#pricing .pricing-cards::scroll-button(left) {
+    content: "<";
+    translate: 50%;
+  }
+  section#pricing .pricing-card {
+    scroll-snap-align: start;
+  }
+  section#pricing .line-pricing {
+    right: -200px;
+    rotate: 0;
+    top: -5px;
+    transform: scale(0.75);
+  }
+  section#pricing .line-pricing path {
+    stroke-width: 25px;
+  }
+  section#pricing .logo {
+    opacity: 0;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;

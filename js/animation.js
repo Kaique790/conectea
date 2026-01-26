@@ -6,7 +6,7 @@ function loading() {
     document.getElementById("smooth-wrapper").style.display = "block";
 
     initGSAP();
-  }, 1600);
+  }, 1500);
 }
 
 function initGSAP() {
@@ -20,7 +20,7 @@ function initGSAP() {
     path.style.strokeDasharray = pathLength;
     path.style.strokeDashoffset = pathLength;
 
-    const tl = gsap.timeline({ delay: 0.25 });
+    const tl = gsap.timeline({ delay: 0 });
 
     tl.to(path, {
       strokeDashoffset: 0,
@@ -318,5 +318,43 @@ function initGSAP() {
       },
       0.3,
     );
+  }
+
+  {
+    const path = document.getElementById("line-pricing-path");
+
+    const pathLength = path.getTotalLength();
+
+    path.style.strokeDasharray = pathLength;
+    path.style.strokeDashoffset = pathLength;
+
+    gsap.to(path, {
+      strokeDashoffset: 0,
+      duration: 2,
+      ease: "power2.out",
+
+      scrollTrigger: {
+        trigger: "#pricing",
+        start: "top center",
+        end: "bottom bottom",
+        scrub: 0.8,
+      },
+    });
+  }
+
+  {
+    const pricingLogo = document.getElementById("pricing-logo");
+
+    gsap.to(pricingLogo, {
+      rotate: "360deg",
+
+      scrollTrigger: {
+        trigger: "#pricing",
+        start: "top center",
+        end: "bottom bottom",
+        scrub: 0.8,
+        toggleActions: "play reverse play reverse",
+      },
+    });
   }
 }
