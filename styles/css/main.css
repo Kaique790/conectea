@@ -1922,6 +1922,7 @@ section#pricing .logo {
     position-area: left top;
     font-family: consolas;
     line-height: 1;
+    z-index: 10;
   }
   section#pricing .pricing-cards::scroll-button(left):disabled,
   section#pricing .pricing-cards::scroll-button(right):disabled {
