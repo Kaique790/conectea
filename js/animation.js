@@ -10,6 +10,16 @@ function loading() {
 }
 
 function initGSAP() {
+  const smoother = ScrollSmoother.create({
+    wrapper: "#smooth-wrapper",
+    content: "#smooth-content",
+    smooth: 1.2,
+    effects: true,
+    smoothTouch: false,
+  });
+
+  gsap.ticker.lagSmoothing(0);
+
   // Animate line-1
   {
     const path = document.getElementById("line-1");
@@ -42,6 +52,8 @@ function initGSAP() {
 
   // Animate titles
   {
+    ScrollTrigger.refresh();
+
     gsap.utils.toArray(".chars-text").forEach((text) => {
       let split = new SplitText(text, {
         type: "words",
@@ -54,10 +66,12 @@ function initGSAP() {
         duration: 0.7,
         ease: "back.out(1.7)",
         stagger: 0.15,
+        force3D: true,
         scrollTrigger: {
           trigger: text,
           start: "top 80%",
           toggleActions: "play reverse play reverse",
+          invalidateOnRefresh: true,
         },
       });
     });
@@ -65,16 +79,6 @@ function initGSAP() {
 
   // Animate line in about section
   {
-    const smoother = ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1.2,
-      effects: true,
-      smoothTouch: false,
-    });
-
-    gsap.ticker.lagSmoothing(0);
-
     const path = document.getElementById("scroll-line");
     const pathLength = path.getTotalLength();
 
@@ -357,4 +361,8 @@ function initGSAP() {
       },
     });
   }
+
+  document.fonts.ready.then(() => {
+    ScrollTrigger.refresh(true);
+  });
 }
