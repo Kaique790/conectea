@@ -91,6 +91,11 @@ i {
   background: #404040;
 }
 
+.chars-text {
+  position: relative;
+  display: inline-block;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
