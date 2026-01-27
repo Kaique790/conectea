@@ -2391,8 +2391,6 @@ i {
 .title h4,
 .title h5,
 .title h6 {
-  letter-spacing: -25%;
-  line-height: 110%;
   font-size: 2.375rem;
 }
 .title span {
