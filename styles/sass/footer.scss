@@ -1,0 +1,268 @@
+@use "./variables.scss" as *;
+
+footer {
+  background-color: #f8f8f8;
+  padding: 2.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.375rem;
+  align-items: center;
+  text-align: center;
+
+  & > div {
+    max-width: 1138px;
+    margin: 0 auto;
+  }
+
+  // Título principal
+  .title {
+    h2 {
+      font-size: 3rem;
+      line-height: 1;
+      letter-spacing: -25%;
+    }
+  }
+
+  // Container com informações
+  .info-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+
+    // Links rápidos
+    .fast-links {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        li {
+          a {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: 400;
+
+            transition: all 0.3s;
+
+            i {
+              font-size: 1.5rem;
+            }
+
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+
+    // Localização
+    .location {
+      h4 {
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      address {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        font-style: normal;
+
+        div {
+          span {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    // Contato
+    .contact {
+      h4 {
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 0.75rem;
+      }
+
+      div {
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    // Logo
+    .logo {
+      width: 235px;
+      height: 235px;
+      object-fit: contain;
+
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  // Botões
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 334px;
+
+    .btn {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      font-size: $text-sm;
+      font-weight: 400;
+      line-height: 1;
+      border-radius: $rounded-lg;
+      transition: all 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.625rem;
+
+      i {
+        font-size: 1.125rem;
+      }
+    }
+
+    .btn-dark {
+      background-color: $color-black;
+      color: $color-white;
+
+      &:hover {
+        filter: brightness(90%);
+      }
+    }
+
+    .btn-outline {
+      border: 1px solid $color-black;
+
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150%;
+        height: 150%;
+        border-radius: 100%;
+        background: $color-black;
+        transition: all 0.45s;
+        z-index: 0;
+      }
+
+      span {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+      }
+
+      span,
+      i {
+        transition: all 0.8s;
+      }
+
+      &:hover {
+        color: $color-white;
+
+        &::after {
+          top: -30%;
+        }
+      }
+    }
+  }
+
+  // Rodapé com copyright
+  .copy {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+
+    p {
+      font-size: $text-sm;
+      font-weight: 400;
+      line-height: 1.6;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    a {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      align-items: center;
+      font-size: $text-sm;
+      font-weight: 400;
+      line-height: 1.6;
+
+      transition: all 0.3s;
+
+      i {
+        font-size: 1.125rem;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @media (width >= 768px) {
+    .info-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      // Logo
+
+      .logo {
+        grid-column: 2;
+      }
+
+      .fast-links ul {
+        align-items: flex-start;
+      }
+
+      .location {
+        text-align: left;
+      }
+
+      .contact {
+        text-align: left;
+      }
+    }
+  }
+
+  @media (width >= 900px) {
+    .info-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      width: fit-content;
+      margin-inline: auto;
+
+      width: 100%;
+    }
+  }
+}

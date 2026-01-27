@@ -1960,6 +1960,206 @@ section#pricing .logo {
   }
 }
 
+footer {
+  background-color: #f8f8f8;
+  padding: 2.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.375rem;
+  align-items: center;
+  text-align: center;
+}
+footer > div {
+  max-width: 1138px;
+  margin: 0 auto;
+}
+footer .title h2 {
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: -25%;
+}
+footer .info-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+footer .info-container .fast-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer .info-container .fast-links ul li a {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+footer .info-container .fast-links ul li a i {
+  font-size: 1.5rem;
+}
+footer .info-container .fast-links ul li a:hover {
+  opacity: 0.7;
+}
+footer .info-container .location h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+footer .info-container .location address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-style: normal;
+}
+footer .info-container .location address div span {
+  font-weight: 700;
+}
+footer .info-container .contact h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+footer .info-container .contact div span {
+  font-weight: 700;
+}
+footer .info-container .logo {
+  width: 235px;
+  height: 235px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+footer .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 334px;
+}
+footer .buttons .btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1;
+  border-radius: 2.8125rem;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+footer .buttons .btn i {
+  font-size: 1.125rem;
+}
+footer .buttons .btn-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+footer .buttons .btn-dark:hover {
+  filter: brightness(90%);
+}
+footer .buttons .btn-outline {
+  border: 1px solid #000000;
+  position: relative;
+  overflow: hidden;
+}
+footer .buttons .btn-outline::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  height: 150%;
+  border-radius: 100%;
+  background: #000000;
+  transition: all 0.45s;
+  z-index: 0;
+}
+footer .buttons .btn-outline span {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+footer .buttons .btn-outline span,
+footer .buttons .btn-outline i {
+  transition: all 0.8s;
+}
+footer .buttons .btn-outline:hover {
+  color: #ffffff;
+}
+footer .buttons .btn-outline:hover::after {
+  top: -30%;
+}
+footer .copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+footer .copy p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+footer .copy p span {
+  font-weight: 700;
+}
+footer .copy a {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  transition: all 0.3s;
+}
+footer .copy a i {
+  font-size: 1.125rem;
+}
+footer .copy a:hover {
+  opacity: 0.7;
+}
+@media (width >= 768px) {
+  footer .info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  footer .info-container .logo {
+    grid-column: 2;
+  }
+  footer .info-container .fast-links ul {
+    align-items: flex-start;
+  }
+  footer .info-container .location {
+    text-align: left;
+  }
+  footer .info-container .contact {
+    text-align: left;
+  }
+}
+@media (width >= 900px) {
+  footer .info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: fit-content;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
