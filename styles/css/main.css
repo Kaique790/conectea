@@ -2392,6 +2392,8 @@ i {
 .title h5,
 .title h6 {
   font-size: 2.375rem;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
 }
 .title span {
   color: #8979ff;
