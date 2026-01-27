@@ -52,21 +52,25 @@ function initGSAP() {
 
   // Animate titles
   {
-    ScrollTrigger.refresh();
-
     gsap.utils.toArray(".chars-text").forEach((text) => {
       let split = new SplitText(text, {
         type: "words",
       });
 
-      gsap.from(split.words, {
+      gsap.set(split.words, {
         y: -100,
         opacity: 0,
         rotation: "random(-80, 80)",
+        force3D: true,
+      });
+
+      gsap.to(split.words, {
+        y: 0,
+        opacity: 1,
+        rotation: "0",
         duration: 0.7,
         ease: "back.out(1.7)",
         stagger: 0.15,
-        force3D: true,
         scrollTrigger: {
           trigger: text,
           start: "top 80%",
@@ -361,8 +365,4 @@ function initGSAP() {
       },
     });
   }
-
-  document.fonts.ready.then(() => {
-    ScrollTrigger.refresh(true);
-  });
 }
