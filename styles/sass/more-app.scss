@@ -185,9 +185,6 @@ section#more-app .scroll-list {
     &:active {
       cursor: grabbing;
     }
-
-    &.no-select {
-    }
   }
 
   &::-webkit-scrollbar {
@@ -266,7 +263,7 @@ section#more-app .scroll-list {
       margin-top: 0.5rem;
     }
 
-    .content a {
+    .content .btn {
       margin-top: 1.5rem;
       width: 100%;
     }

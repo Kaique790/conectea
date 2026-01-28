@@ -1450,7 +1450,7 @@ section#more-app .scroll-list article .content p {
   line-height: 1.25;
   margin-top: 0.5rem;
 }
-section#more-app .scroll-list article .content a {
+section#more-app .scroll-list article .content .btn {
   margin-top: 1.5rem;
   width: 100%;
 }
