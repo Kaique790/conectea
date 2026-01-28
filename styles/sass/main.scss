@@ -34,7 +34,6 @@ html {
 }
 
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -56,6 +55,8 @@ button {
 
   text-decoration: none;
   border: none;
+
+  font-family: "poppins", sans-serif;
 
   cursor: pointer;
 }
@@ -154,6 +155,9 @@ i {
   transition: all 0.3s;
 
   width: fit-content;
+
+  font-family: "poppins", sans-serif;
+  font-size: $text-md;
 
   i {
     font-size: 1.15rem;

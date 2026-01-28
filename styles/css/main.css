@@ -1551,10 +1551,15 @@ section#more-app .scroll-list article img {
 #team .cards-container .card:hover .content {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.0745098039);
 }
+#team .cards-container .card:hover .img {
+  rotate: -10deg;
+  transform: scale(1.1);
+}
 #team .cards-container .card .content {
   transition: all 0.3s;
   border: 1px solid #d8d8d8;
   border-radius: 1.5rem;
+  text-align: left;
   position: relative;
   margin-left: -5rem;
   max-width: 324px;
@@ -1596,6 +1601,7 @@ section#more-app .scroll-list article img {
 #team .cards-container .card .img {
   border: 4px solid #0d4b3f;
   border-radius: 100%;
+  transition: all 0.3s;
   position: relative;
   z-index: 2;
   background-color: white;
@@ -1628,7 +1634,7 @@ section#more-app .scroll-list article img {
     transform: scale(1);
   }
   40% {
-    transform: scale(1.1);
+    transform: scale(1.02);
   }
   70% {
     transform: scale(0.95);
@@ -1971,6 +1977,7 @@ footer {
 }
 footer > div {
   max-width: 1138px;
+  width: 100%;
   margin: 0 auto;
 }
 footer .title h2 {
@@ -2040,6 +2047,7 @@ footer .buttons {
   gap: 1rem;
   width: 100%;
   max-width: 334px;
+  margin: 2rem auto;
 }
 footer .buttons .btn {
   width: 100%;
@@ -2148,6 +2156,9 @@ footer .copy a:hover {
   footer .info-container .contact {
     text-align: left;
   }
+  footer .info-container .logo {
+    margin: 0 0;
+  }
 }
 @media (width >= 900px) {
   footer .info-container {
@@ -2181,7 +2192,6 @@ html {
 }
 
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -2200,6 +2210,7 @@ button {
   color: #000000;
   text-decoration: none;
   border: none;
+  font-family: "poppins", sans-serif;
   cursor: pointer;
 }
 
@@ -2288,6 +2299,8 @@ i {
   border-radius: 2rem;
   transition: all 0.3s;
   width: fit-content;
+  font-family: "poppins", sans-serif;
+  font-size: 1rem;
 }
 .btn i {
   font-size: 1.15rem;

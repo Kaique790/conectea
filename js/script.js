@@ -66,3 +66,8 @@ sliders.forEach((slider) => {
     slider.scrollLeft = scrollLeft - jump;
   });
 });
+
+function copyText(email) {
+  navigator.clipboard.writeText(email);
+  alert("Email copiado: " + email);
+}

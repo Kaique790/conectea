@@ -93,16 +93,18 @@
 
     <header id="header">
       <div>
-        <img
-          class="logo"
-          src="./assets/images/logo.svg"
-          alt="logo do conectea. Três pessoas juntas com quebra-cabeça no meio representando conexão."
-        />
+        <a href="#hero">
+          <img
+            class="logo"
+            src="./assets/images/logo.svg"
+            alt="logo do conectea. Três pessoas juntas com quebra-cabeça no meio representando conexão."
+          />
+        </a>
 
         <nav class="desktop-navbar">
           <ul>
             <li>
-              <a href="#">
+              <a href="#hero">
                 <i class="ph ph-house"></i>
                 Início
               </a>
@@ -114,19 +116,19 @@
               </a>
             </li>
             <li class="md">
-              <a href="#services">
+              <a href="#about-app">
                 <i class="ph ph-plugs"></i>
                 Aplicativo
               </a>
             </li>
             <li>
-              <a href="#steps">
+              <a href="#depoiments">
                 <i class="ph ph-scroll"></i>
                 Validações
               </a>
             </li>
             <li class="md">
-              <a href="#footer">
+              <a href="#team">
                 <i class="ph ph-users"></i>
                 Quem somos
               </a>
@@ -146,9 +148,9 @@
         </div>
 
         <div class="mobile-menu">
-          <a class="contact">
+          <button onclick="copyText('conectea.app@gmail.com')" class="contact">
             <i class="ph ph-phone"></i>
-          </a>
+          </button>
           <button onclick="toggleNavbar()">
             <i class="ph ph-list"></i>
           </button>
@@ -171,7 +173,7 @@
 
             <ul>
               <li>
-                <a href="#">
+                <a href="#hero">
                   <i class="ph ph-house"></i>
                   Início
                 </a>
@@ -183,13 +185,13 @@
                 </a>
               </li>
               <li>
-                <a href="#services">
+                <a href="#about-app">
                   <i class="ph ph-package"></i>
                   Serviços
                 </a>
               </li>
               <li>
-                <a href="#steps">
+                <a href="#depoiments">
                   <i class="ph ph-book-open-text"></i>
                   Etapas
                 </a>
@@ -203,18 +205,25 @@
             </ul>
 
             <div class="buttons">
-              <a target="_blank" class="btn btn-outline">
+              <a
+                target="_blank"
+                href="https://figma.com/proto/MiDlxzULmdyznTAvdJ0hRo/conectea-app?node-id=0-1"
+                class="btn btn-outline"
+              >
                 <span>
                   Acesse nosso protótipo
                   <i id="w-i" class="ph ph-arrow-up-right"></i>
                 </span>
               </a>
-              <a target="_blank" class="btn btn-outline">
+              <button
+                onclick="copyText('conectea.app@gmail.com')"
+                class="btn btn-outline"
+              >
                 <span>
                   Entre em contato
                   <i id="i-i" class="ph ph-envelope-simple"></i>
                 </span>
-              </a>
+              </button>
             </div>
 
             <button class="close-navbar" onclick="toggleNavbar()">
@@ -231,7 +240,7 @@
     <div id="smooth-wrapper">
       <div id="smooth-content">
         <main>
-          <section class="hero">
+          <section id="hero" class="hero">
             <div>
               <div class="left">
                 <div class="slogan boom-delay">
@@ -264,15 +273,22 @@
                   </header>
 
                   <div class="buttons">
-                    <a href="" class="btn btn-primary">
+                    <a
+                      target="_blank"
+                      href="https://figma.com/proto/MiDlxzULmdyznTAvdJ0hRo/conectea-app?node-id=0-1"
+                      class="btn btn-primary"
+                    >
                       Acessar protótipo <i class="ph ph-arrow-up-right"></i>
                     </a>
 
-                    <a href="" class="btn btn-outline">
+                    <button
+                      onclick="copyText('conectea.app@gmail.com')"
+                      class="btn btn-outline"
+                    >
                       <span>
                         Ver mais <i class="ph ph-arrow-up-right"></i>
                       </span>
-                    </a>
+                    </button>
                   </div>
                 </article>
               </div>
@@ -327,16 +343,23 @@
                 </p>
 
                 <div class="buttons">
-                  <a href="" class="btn btn-primary">
+                  <a
+                    target="_blank"
+                    href="https://figma.com/proto/MiDlxzULmdyznTAvdJ0hRo/conectea-app?node-id=0-1"
+                    class="btn btn-primary"
+                  >
                     Acessar protótipo
                     <i class="ph ph-arrow-up-right"></i>
                   </a>
-                  <a href="" class="btn btn-outline">
+                  <button
+                    onclick="copyText('conectea.app@gmail.com')"
+                    class="btn btn-outline"
+                  >
                     <span>
                       Contato
                       <i class="ph ph-arrow-up-right"></i>
                     </span>
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -363,16 +386,23 @@
                 </p>
 
                 <div class="buttons">
-                  <a href="" class="btn btn-primary">
+                  <a
+                    target="_blank"
+                    href="https://figma.com/proto/MiDlxzULmdyznTAvdJ0hRo/conectea-app?node-id=0-1"
+                    class="btn btn-primary"
+                  >
                     Acessar protótipo
                     <i class="ph ph-arrow-up-right"></i>
                   </a>
-                  <a href="" class="btn btn-outline">
+                  <button
+                    onclick="copyText('conectea.app@gmail.com')"
+                    class="btn btn-outline"
+                  >
                     <span>
                       Contato
                       <i class="ph ph-arrow-up-right"></i>
                     </span>
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -392,10 +422,13 @@
                 </p>
 
                 <div class="buttons">
-                  <a href="" class="btn btn-primary">
+                  <button
+                    onclick="copyText('conectea.app@gmail.com')"
+                    class="btn btn-primary"
+                  >
                     Nosso cenário atual
                     <i class="ph ph-arrow-up-right"></i>
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -412,14 +445,14 @@
                   opacity="0.5"
                   d="M216 37.0068C216 37.0068 336.35 103.816 327.85 134.816C301.567 230.671 119.299 140.235 93.8498 236.316C64.6956 346.383 311.181 291.533 332.85 403.316C358.785 537.105 29.7277 523.461 84.3498 648.316C102.041 688.755 -43.7939 892.88 10.8496 970.316C69.842 1053.91 303.755 822.061 372.85 918.316C395.564 949.959 381.377 958.309 372.85 996.316C365.505 1029.05 353.326 1067.76 331.35 1109.32C285.968 1195.14 167.317 1191.6 158.85 1288.32C149.501 1395.1 343.508 1395.32 331.35 1501.82C318.872 1611.12 118.929 1560.21 104.85 1669.32C98.8496 1715.82 104.118 1735.66 127.35 1767.32C152.673 1801.82 206.425 1779.98 224 1819.01C244.297 1864.08 179.5 1937.51 179.5 1937.51"
                   stroke="#FFBB00"
-                  stroke-width="140"
+                  stroke-width="160"
                   stroke-linecap="round"
                 />
               </svg>
             </div>
           </section>
 
-          <section data-speed="1.25" class="problems">
+          <section id="problems" data-speed="1.25" class="problems">
             <div>
               <div class="title">
                 <h2>A <span>realidade que</span> enfrentamos</h2>
@@ -590,6 +623,7 @@
           </section>
 
           <section
+            id="features"
             class="about-app-features"
             aria-label="Benefícios do ConecTEA"
           >
@@ -701,16 +735,23 @@
                   <img src="./assets/images/mobile-mockup.png" alt="" />
                 </div>
                 <div class="buttons">
-                  <a href="" class="btn btn-dark">
+                  <a
+                    target="_blank"
+                    href="https://figma.com/proto/MiDlxzULmdyznTAvdJ0hRo/conectea-app?node-id=0-1"
+                    class="btn btn-dark"
+                  >
                     Acessar protótipo
                     <i class="ph ph-arrow-up-right"></i>
                   </a>
-                  <a href="" class="btn btn-outline">
+                  <button
+                    onclick="copyText('conectea.app@gmail.com')"
+                    class="btn btn-outline"
+                  >
                     <span>
                       Fale conosco
                       <i class="ph ph-arrow-up-right"></i>
                     </span>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -725,11 +766,14 @@
 
                         <h4>Atividades médicas</h4>
                         <p>Profissionais de sáude deixam instruções...</p>
-                        <a href="" class="btn btn-outline-light">
+                        <button
+                          onclick="copyText('conectea.app@gmail.com')"
+                          class="btn btn-outline-light"
+                        >
                           <span>
                             Ler mais <i class="ph ph-arrow-up-right"></i>
                           </span>
-                        </a>
+                        </button>
                       </div>
 
                       <img src="./assets/images/card-1.svg" alt="" />
@@ -743,11 +787,14 @@
 
                         <h4>Cursos</h4>
                         <p>Parcerias trarão cursos para capacitar...</p>
-                        <a href="" class="btn btn-outline-light">
+                        <button
+                          onclick="copyText('conectea.app@gmail.com')"
+                          class="btn btn-outline-light"
+                        >
                           <span>
                             Ler mais <i class="ph ph-arrow-up-right"></i>
                           </span>
-                        </a>
+                        </button>
                       </div>
 
                       <img src="./assets/images/card-2.svg" alt="" />
@@ -761,11 +808,14 @@
 
                         <h4>IA adaptativa</h4>
                         <p>Em breve teremos uma IA que analisa...</p>
-                        <a href="" class="btn btn-outline-light">
+                        <button
+                          onclick="copyText('conectea.app@gmail.com')"
+                          class="btn btn-outline-light"
+                        >
                           <span>
                             Ler mais <i class="ph ph-arrow-up-right"></i>
                           </span>
-                        </a>
+                        </button>
                       </div>
 
                       <img src="./assets/images/card-3.svg" alt="" />
@@ -783,11 +833,14 @@
 
                         <h4>Parcerias</h4>
                         <p>Nosso app será ampliado para atender...</p>
-                        <a href="" class="btn btn-outline-light">
+                        <button
+                          onclick="copyText('conectea.app@gmail.com')"
+                          class="btn btn-outline-light"
+                        >
                           <span>
                             Ler mais <i class="ph ph-arrow-up-right"></i>
                           </span>
-                        </a>
+                        </button>
                       </div>
 
                       <img src="./assets/images/card-4.svg" alt="" />
@@ -801,11 +854,14 @@
 
                         <h4>Controle dos pais</h4>
                         <p>Os professores entederão como lidar</p>
-                        <a href="" class="btn btn-outline-light">
+                        <button
+                          onclick="copyText('conectea.app@gmail.com')"
+                          class="btn btn-outline-light"
+                        >
                           <span>
                             Ler mais <i class="ph ph-arrow-up-right"></i>
                           </span>
-                        </a>
+                        </button>
                       </div>
 
                       <img src="./assets/images/card-5.svg" alt="" />
@@ -819,11 +875,14 @@
 
                         <h4>Rotinas</h4>
                         <p>Professorea poderão aprender a lidar com as...</p>
-                        <a href="" class="btn btn-outline-light">
+                        <button
+                          onclick="copyText('conectea.app@gmail.com')"
+                          class="btn btn-outline-light"
+                        >
                           <span>
                             Ler mais <i class="ph ph-arrow-up-right"></i>
                           </span>
-                        </a>
+                        </button>
                       </div>
 
                       <img src="./assets/images/card-6.svg" alt="" />
@@ -954,7 +1013,10 @@
             </header>
 
             <div class="cards-container">
-              <div class="card">
+              <button
+                class="card"
+                onclick="copyText('caiomatheuslobodias@gmail.com')"
+              >
                 <div class="img">
                   <div class="border-white">
                     <img src="./assets/images/caio.png" alt="" />
@@ -974,9 +1036,9 @@
                     <i class="ph ph-arrow-up-right"></i>
                   </div>
                 </div>
-              </div>
+              </button>
 
-              <div class="card">
+              <button class="card" onclick="copyText('kiaqbs@gmail.com')">
                 <div class="img">
                   <div class="border-white">
                     <img src="./assets/images/kaique.jpg" alt="" />
@@ -996,9 +1058,12 @@
                     <i class="ph ph-arrow-up-right"></i>
                   </div>
                 </div>
-              </div>
+              </button>
 
-              <div class="card">
+              <button
+                class="card"
+                onclick="copyText('pdroribeiro10@gmail.com')"
+              >
                 <div class="img">
                   <div class="border-white">
                     <img src="./assets/images/pedro.jpg" alt="" />
@@ -1018,9 +1083,12 @@
                     <i class="ph ph-arrow-up-right"></i>
                   </div>
                 </div>
-              </div>
+              </button>
 
-              <div class="card">
+              <button
+                class="card"
+                onclick="copyText('ryan.alunoceag@gmail.com')"
+              >
                 <div class="img">
                   <div class="border-white">
                     <img src="./assets/images/ryan.jpg" alt="" />
@@ -1040,7 +1108,7 @@
                     <i class="ph ph-arrow-up-right"></i>
                   </div>
                 </div>
-              </div>
+              </button>
             </div>
           </section>
 
@@ -1078,15 +1146,22 @@
                 </p>
 
                 <div class="buttons">
-                  <a href="" class="btn btn-primary">
+                  <a
+                    target="_blank"
+                    href="https://figma.com/proto/MiDlxzULmdyznTAvdJ0hRo/conectea-app?node-id=0-1"
+                    class="btn btn-primary"
+                  >
                     Acessar protótipo <i class="ph ph-arrow-up-right"></i>
                   </a>
 
-                  <a href="" class="btn btn-outline">
+                  <button
+                    onclick="copyText('conectea.app@gmail.com')"
+                    class="btn btn-outline"
+                  >
                     <span>
                       Entre em contato<i class="ph ph-arrow-up-right"></i>
                     </span>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -1148,9 +1223,13 @@
                     </li>
                   </ul>
 
-                  <button class="pricing-card__cta">
+                  <a
+                    target="_blank"
+                    href="https://figma.com/proto/MiDlxzULmdyznTAvdJ0hRo/conectea-app?node-id=0-1"
+                    class="pricing-card__cta"
+                  >
                     Conhecer o app <i class="ph ph-arrow-up-right"></i>
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -1215,9 +1294,13 @@
                       </li>
                     </ul>
 
-                    <button class="pricing-card__cta">
+                    <a
+                      target="_blank"
+                      href="https://figma.com/proto/MiDlxzULmdyznTAvdJ0hRo/conectea-app?node-id=0-1"
+                      class="pricing-card__cta"
+                    >
                       Conhecer o app <i class="ph ph-arrow-up-right"></i>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1275,9 +1358,13 @@
                     </li>
                   </ul>
 
-                  <button class="pricing-card__cta">
+                  <a
+                    target="_blank"
+                    href="https://figma.com/proto/MiDlxzULmdyznTAvdJ0hRo/conectea-app?node-id=0-1"
+                    class="pricing-card__cta"
+                  >
                     Conhecer o app <i class="ph ph-arrow-up-right"></i>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1308,85 +1395,99 @@
           </section>
         </main>
 
-        <footer>
-          <div class="title">
-            <h2>Junte-se ao ConecTEA</h2>
-          </div>
-
-          <div class="info-container">
-            <nav class="fast-links">
-              <ul>
-                <li>
-                  <a href="a"> Voltar ao topo <i class="ph ph-link"></i> </a>
-                </li>
-                <li>
-                  <a href="a"> Sessão problemas<i class="ph ph-link"></i> </a>
-                </li>
-                <li>
-                  <a href="a">
-                    Sessão sobre o app <i class="ph ph-link"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="a">
-                    Sessão depoimentos <i class="ph ph-link"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="a"> Nosso time <i class="ph ph-link"></i> </a>
-                </li>
-              </ul>
-            </nav>
-
-            <div class="location">
-              <h4>Nossa localização:</h4>
-
-              <address>
-                <div>
-                  <span>CEP:</span> <br />
-                  49.107-232
-                </div>
-
-                <div>
-                  <span>Endereço:</span> <br />
-                  Segipe TEC
-                </div>
-              </address>
+        <footer id="footer">
+          <div>
+            <div class="title">
+              <h2>Junte-se ao ConecTEA</h2>
             </div>
 
-            <div class="contact">
-              <h4>Nosso contato:</h4>
+            <div class="info-container">
+              <nav class="fast-links">
+                <ul>
+                  <li>
+                    <a href="#hero">
+                      Voltar ao topo <i class="ph ph-link"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#problems">
+                      Sessão problemas<i class="ph ph-link"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#about-app">
+                      Sessão sobre o app <i class="ph ph-link"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#depoiments">
+                      Sessão depoimentos <i class="ph ph-link"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#team"> Nosso time <i class="ph ph-link"></i> </a>
+                  </li>
+                </ul>
+              </nav>
 
-              <div>
-                <span>Email:</span> <br />
-                conectea.app@gmail.com
+              <div class="location">
+                <h4>Nossa localização:</h4>
+
+                <address>
+                  <div>
+                    <span>CEP:</span> <br />
+                    49.107-232
+                  </div>
+
+                  <div>
+                    <span>Endereço:</span> <br />
+                    Segipe TEC
+                  </div>
+                </address>
               </div>
+
+              <div class="contact">
+                <h4>Nosso contato:</h4>
+
+                <div>
+                  <span>Email:</span> <br />
+                  conectea.app@gmail.com
+                </div>
+              </div>
+
+              <img src="./assets/images/logo.svg" alt="" class="logo" />
             </div>
 
-            <img src="./assets/images/logo.svg" alt="" class="logo" />
-          </div>
-
-          <div class="buttons">
-            <a href="" class="btn btn-dark">
-              Acesse nosso protótipo
-              <i class="ph ph-arrow-up-right"></i>
-            </a>
-            <a href="" class="btn btn-outline">
-              <span>
-                Entre em contato
+            <div class="buttons">
+              <a
+                href="https://figma.com/proto/MiDlxzULmdyznTAvdJ0hRo/conectea-app?node-id=0-1"
+                target="_blank"
+                class="btn btn-dark"
+              >
+                Acesse nosso protótipo
                 <i class="ph ph-arrow-up-right"></i>
-              </span>
-            </a>
-          </div>
+              </a>
+              <button
+                onclick="copyText('conectea.app@gmail.com')"
+                class="btn btn-outline"
+              >
+                <span>
+                  Entre em contato
+                  <i class="ph ph-arrow-up-right"></i>
+                </span>
+              </button>
+            </div>
 
-          <div class="copy">
-            <p>
-              &copy; <span>Todos os direitos reservados</span> à ConecTEA - 2025
-            </p>
-            <a href="#">
-              <div class="ph ph-phone"></div>
-              Atendimento</a
-            >
+            <div class="copy">
+              <p>
+                &copy; <span>Todos os direitos reservados</span> à ConecTEA -
+                2025
+              </p>
+              <a href="#">
+                <div class="ph ph-phone"></div>
+                Atendimento</a
+              >
+            </div>
           </div>
         </footer>
       </div>

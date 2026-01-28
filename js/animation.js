@@ -13,12 +13,22 @@ function initGSAP() {
   const smoother = ScrollSmoother.create({
     wrapper: "#smooth-wrapper",
     content: "#smooth-content",
-    smooth: 1.2,
+    smooth: 1,
     effects: true,
     smoothTouch: false,
   });
 
   gsap.ticker.lagSmoothing(0);
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const target = link.getAttribute("href");
+
+      smoother.scrollTo(target, true, "top top+=80");
+    });
+  });
 
   // Animate line-1
   {
