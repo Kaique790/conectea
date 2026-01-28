@@ -241,11 +241,13 @@ function initGSAP() {
           rotate: 0,
 
           duration: 1.5,
-          ease: "elastic.out(1,0.5)",
+          ease: "elastic.out(0.5,0.5)",
 
           scrollTrigger: {
             start: "top center",
             trigger: card,
+
+            toggleActions: "play reverse play reverse",
           },
         },
       );
@@ -268,7 +270,7 @@ function initGSAP() {
           opacity: 1,
 
           duration: 1.5,
-          ease: "elastic.out(1,0.5)",
+          ease: "elastic.out(0.5,0.5)",
 
           scrollTrigger: {
             toggleActions: "play reverse play reverse",
