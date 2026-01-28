@@ -457,17 +457,6 @@ section.hero .hero-img {
     margin-top: -3.5rem;
   }
 }
-section.hero #signature {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-}
-@media (width <= 700px) {
-  section.hero #signature {
-    display: none;
-  }
-}
 
 .about {
   padding-top: 6.25rem;
@@ -1757,6 +1746,11 @@ section#pricing .pricing-header {
 }
 section#pricing .pricing-header h2 {
   max-width: 230px;
+}
+@media (width >= 640px) {
+  section#pricing .pricing-header h2 {
+    max-width: none;
+  }
 }
 section#pricing .pricing-header h2,
 section#pricing .pricing-header p {

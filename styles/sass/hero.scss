@@ -160,15 +160,4 @@ section.hero {
       margin-top: -3.5rem;
     }
   }
-
-  #signature {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-
-    @media (width <= 700px) {
-      display: none;
-    }
-  }
 }

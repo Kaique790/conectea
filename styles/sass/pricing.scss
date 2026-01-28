@@ -39,6 +39,10 @@ section#pricing {
 
     h2 {
       max-width: 230px;
+
+      @media (width >=640px) {
+        max-width: none;
+      }
     }
 
     h2,
