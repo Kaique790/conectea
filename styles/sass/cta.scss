@@ -53,10 +53,19 @@
 
   .content .buttons {
     display: flex;
+    flex-direction: column;
 
     gap: 1rem;
 
     margin-top: 3rem;
+
+    .btn {
+      width: 100%;
+    }
+
+    @media (width >= 500px) {
+      flex-direction: row;
+    }
   }
 
   .absolute-wrapper {

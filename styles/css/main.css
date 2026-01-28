@@ -1691,8 +1691,17 @@ section#more-app .scroll-list article img {
 }
 #cta .content .buttons {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
   margin-top: 3rem;
+}
+#cta .content .buttons .btn {
+  width: 100%;
+}
+@media (width >= 500px) {
+  #cta .content .buttons {
+    flex-direction: row;
+  }
 }
 #cta .absolute-wrapper {
   position: absolute;
@@ -1745,6 +1754,9 @@ section#pricing .pricing-header {
   margin-bottom: 4rem;
   z-index: 10;
   position: relative;
+}
+section#pricing .pricing-header h2 {
+  max-width: 230px;
 }
 section#pricing .pricing-header h2,
 section#pricing .pricing-header p {
