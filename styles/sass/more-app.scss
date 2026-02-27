@@ -11,11 +11,11 @@ section#more-app {
     margin: 0 auto;
 
     padding: 0 1rem;
+    padding-top: 4rem;
   }
 
   .title {
     text-align: left;
-
     max-width: 374px;
 
     p {
@@ -24,8 +24,7 @@ section#more-app {
   }
 
   .container {
-    margin: 0 auto;
-    margin-top: 3rem;
+    margin-top: 8rem;
 
     max-width: 1138px;
     z-index: 100;
@@ -33,6 +32,7 @@ section#more-app {
     position: relative;
     display: flex;
     align-items: center;
+    margin-right: auto;
 
     .mockup {
       display: flex;
@@ -66,11 +66,14 @@ section#more-app {
     }
   }
 
-  @media (width >= 748px) {
+  @media (width >= 848px) {
     display: flex;
+    flex-direction: row;
 
     align-items: center;
     justify-content: center;
+
+    gap: 3.5rem;
 
     position: relative;
     margin: 0 auto;
@@ -101,10 +104,16 @@ section#more-app {
 }
 
 section#more-app .wrapper-cards-container {
-  padding-top: 20rem;
-  margin-top: -18rem;
-
+  padding-top: 4rem;
+  width: 100vw;
   position: relative;
+
+  @media (width >= 848px) {
+    height: 330px;
+    width: 300px;
+
+    background: none;
+  }
 
   &::before {
     content: "";
@@ -116,88 +125,47 @@ section#more-app .wrapper-cards-container {
     top: 0;
 
     @include bg-gradient;
-    @media (width >= 748px) {
+    @media (width >= 848px) {
       display: none;
     }
   }
 
-  .slogan {
-    margin-top: 4rem;
-    padding-bottom: 2rem;
-    padding-inline: 1rem;
-
-    @media (width >= 748px) {
-      margin-left: -50vw;
-    }
-
-    @media (width >= 940px) {
-      margin-left: -38rem;
-    }
-  }
-
-  @media (width >= 748px) {
+  @media (width >= 848px) {
     margin-top: 0;
     padding-top: 0;
   }
 }
 
 section#more-app .cards-container {
-  overflow: hidden;
   display: flex;
+
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 
   position: relative;
   z-index: 10;
-
-  &:hover .scroll-list {
-    animation-play-state: paused;
-  }
-
-  @media (width >= 748px) {
-    max-width: 344px;
-
-    &:first-of-type {
-      .scroll-list {
-        animation: jump-left 8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
-      }
-    }
-
-    &.last {
-      .scroll-list {
-        animation: jump-right 8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
-      }
-    }
-  }
 }
 
 section#more-app .scroll-list {
-  padding: 1rem;
-
+  position: relative;
   display: flex;
+  flex-direction: column;
   gap: 2rem;
-
-  @media (width <= 748px) {
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-
-    cursor: grab;
-
-    &:active {
-      cursor: grabbing;
-    }
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  width: 330px;
 
   article {
+    z-index: 10;
     background: #e8aa00;
     min-width: 300px;
     max-width: 300px;
 
+    height: fit-content;
+
     padding: 1rem;
     border-radius: 24px;
+
+    width: 100%;
 
     .content {
       z-index: 10;
@@ -278,42 +246,12 @@ section#more-app .scroll-list {
       object-fit: cover;
     }
   }
-}
 
-@keyframes jump-left {
-  0%,
-  20% {
-    transform: translateX(0);
-  } // Parado no 1º card
-  25%,
-  45% {
-    transform: translateX(-332px);
-  } // Pula e para no 2º
-  50%,
-  70% {
-    transform: translateX(-664px);
-  } // Pula e para no 3º
-  75%,
-  100% {
-    transform: translateX(0);
-  } // Retorno suave ao início
-}
-
-@keyframes jump-right {
-  0%,
-  20% {
-    transform: translateX(-664px);
-  } // Parado no 1º card
-  25%,
-  45% {
-    transform: translateX(-332px);
-  } // Pula e para no 2º
-  50%,
-  70% {
-    transform: translateX(-0px);
-  } // Pula e para no 3º
-  75%,
-  100% {
-    transform: translateX(-664px);
-  } // Retorno suave ao início
+  @media (width >= 848px) {
+    article {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
 }

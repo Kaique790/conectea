@@ -377,4 +377,53 @@ function initGSAP() {
       },
     });
   }
+
+  {
+    ScrollTrigger.matchMedia({
+      "(min-width: 849px)": function () {
+        gsap.fromTo(
+          ".stacking__card:not(:first-child)",
+          {
+            x: 1000,
+            opacity: 0,
+            rotate: -90,
+          },
+          {
+            x: 0,
+            rotate: 0,
+            opacity: 1,
+            stagger: 1,
+            scrollTrigger: {
+              pin: "#more-app",
+              scrub: 5,
+
+              invalidateOnRefresh: true,
+            },
+          },
+        );
+      },
+
+      "(max-width: 848px)": function () {
+        gsap.utils.toArray(".stacking__card").forEach((card) => {
+          gsap.fromTo(
+            card,
+            {
+              x: 1000,
+              opacity: 0,
+            },
+            {
+              x: 0,
+              opacity: 1,
+              duration: 0.6,
+              scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play reverse play reverse",
+              },
+            },
+          );
+        });
+      },
+    });
+  }
 }

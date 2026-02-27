@@ -1,0 +1,21 @@
+{
+  "name": "conectea",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Kaique790/conectea#readme",
+  "bugs": {
+    "url": "https://github.com/Kaique790/conectea/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaique790/conectea.git"
+  },
+  "license": "MIT",
+  "author": "Kaique Bezerra",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx sass ./styles/sass/main.scss ./styles/css/main.css --watch"
+  }
+}

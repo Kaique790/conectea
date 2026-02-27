@@ -15,16 +15,6 @@ footer {
     margin: 0 auto;
   }
 
-  // Título principal
-  .title {
-    h2 {
-      font-size: 3rem;
-      line-height: 1;
-      letter-spacing: -25%;
-    }
-  }
-
-  // Container com informações
   .info-container {
     margin-top: 2rem;
     display: flex;
@@ -32,7 +22,6 @@ footer {
     gap: 3rem;
     width: 100%;
 
-    // Links rápidos
     .fast-links {
       ul {
         display: flex;
@@ -62,7 +51,6 @@ footer {
       }
     }
 
-    // Localização
     .location {
       h4 {
         font-size: 1.125rem;
@@ -84,7 +72,6 @@ footer {
       }
     }
 
-    // Contato
     .contact {
       h4 {
         font-size: 1.125rem;
@@ -100,7 +87,6 @@ footer {
       }
     }
 
-    // Logo
     .logo {
       width: 235px;
       height: 235px;
@@ -111,7 +97,6 @@ footer {
     }
   }
 
-  // Botões
   .buttons {
     display: flex;
     flex-direction: column;
@@ -192,7 +177,6 @@ footer {
     }
   }
 
-  // Rodapé com copyright
   .copy {
     display: flex;
     flex-direction: column;
@@ -235,8 +219,6 @@ footer {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-
-      // Logo
 
       .logo {
         grid-column: 2;
