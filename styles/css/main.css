@@ -169,6 +169,14 @@ body > header .mobile-menu .contact {
 body > header .mobile-menu .contact i {
   font-size: 1.5rem;
 }
+body > header .mobile-menu button,
+body > header .mobile-menu button i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  line-height: 1;
+}
 @media (width >= 880px) {
   body > header .mobile-menu {
     display: none;
@@ -1355,7 +1363,6 @@ section#more-app .scroll-list {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 330px;
 }
 section#more-app .scroll-list article {
   z-index: 10;

@@ -141,6 +141,15 @@ body > header {
       }
     }
 
+    button,
+    button i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: fit-content;
+      line-height: 1;
+    }
+
     @media (width >= 880px) {
       display: none;
     }
